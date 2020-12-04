@@ -14,13 +14,14 @@ public class Grab : MonoBehaviour
 
     float rotSpeed = 200f;
 
-    // Update is called once per frame
     void Update()
     {              
+        //rotation, this is quiet simple but after trying out different ways of doing it this was best
         if (Input.GetKey(KeyCode.Q)) { transform.Rotate(Vector3.up * rotSpeed * Time.deltaTime); }
 
         if (Input.GetKey(KeyCode.E)) { transform.Rotate(-Vector3.right * rotSpeed * Time.deltaTime); }
 
+        //pick up item
         if (Input.GetMouseButtonDown(0))
         {
 
