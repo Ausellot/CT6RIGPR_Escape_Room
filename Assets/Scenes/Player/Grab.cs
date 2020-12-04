@@ -12,11 +12,18 @@ public class Grab : MonoBehaviour
 
     public PickableItem pickedItem;
 
+    float rotSpeed = 200f;
+
     // Update is called once per frame
     void Update()
-    {
+    {              
+        if (Input.GetKey(KeyCode.Q)) { transform.Rotate(Vector3.up * rotSpeed * Time.deltaTime); }
+
+        if (Input.GetKey(KeyCode.E)) { transform.Rotate(-Vector3.right * rotSpeed * Time.deltaTime); }
+
         if (Input.GetMouseButtonDown(0))
         {
+
             if (pickedItem)
             {
                 DropItem(pickedItem);
@@ -30,7 +37,10 @@ public class Grab : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, 1.5f))
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
-                  if (pickable)
+
+
+
+                    if (pickable)
                   {
                     PickItem(pickable);
                   }
@@ -38,7 +48,9 @@ public class Grab : MonoBehaviour
 
             }
         }
+        
     }
+
     void PickItem(PickableItem item)
     {
         pickedItem = item;
@@ -51,6 +63,8 @@ public class Grab : MonoBehaviour
 
         item.transform.localPosition = Vector3.zero;
         item.transform.localEulerAngles = Vector3.zero;
+
+
     }
 
     void DropItem(PickableItem item)
