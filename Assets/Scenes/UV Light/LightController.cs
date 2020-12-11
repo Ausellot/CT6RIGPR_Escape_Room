@@ -12,7 +12,7 @@ public class LightController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        flashlight.enabled = false;
     }
 
     // Update is called once per frame
