@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Door
   - Keypad
+  - DesChoice
+  - LeaveEvChoice
+  - LeaveChoice
   layers:
   - Default
   - TransparentFX
