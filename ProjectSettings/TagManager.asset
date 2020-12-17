@@ -9,6 +9,7 @@ TagManager:
   - DesChoice
   - LeaveEvChoice
   - LeaveChoice
+  - Password
   layers:
   - Default
   - TransparentFX
