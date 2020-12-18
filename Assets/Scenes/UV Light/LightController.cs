@@ -18,20 +18,31 @@ public class LightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       reveal.SetVector("_LightPosition", flashlight.transform.position);
-        reveal.SetVector("_LightDirection", -flashlight.transform.forward);
-        reveal.SetFloat("_LightAngle", flashlight.spotAngle); 
+        //reveal.SetVector("_LightPosition", flashlight.transform.position);
 
-        if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
+        //reveal.SetVector("_LightDirection", -flashlight.transform.forward);
+
+        //reveal.SetFloat("_LightAngle", flashlight.spotAngle);
+
+        if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
         {
             flashlight.enabled = true;
-            
-        
 
+        }
 
-        } else if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
+        else if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
         {
             flashlight.enabled = false;
         }
+
+        if (flashlight.enabled == true)
+        {
+            reveal.SetVector("_LightPosition", flashlight.transform.position);
+
+            reveal.SetVector("_LightDirection", -flashlight.transform.forward);
+
+            reveal.SetFloat("_LightAngle", flashlight.spotAngle);
+        }
+
     }
 }
