@@ -11,6 +11,8 @@ public class Keypad : MonoBehaviour
     public string CorrectPassword = "123";
     public string input;
     public Text DisplayText;
+    public AudioSource CorrectSound;
+    public AudioSource WrongSound;
 
     private bool KeypadScreen;
     private float btnClicked = 0;
@@ -29,12 +31,14 @@ public class Keypad : MonoBehaviour
             if (input == CorrectPassword)
             {
                 Door1.GetComponent<Animator>().Play("Open Door1");
+                CorrectSound.Play();
                 Debug.Log("Correct");
                 input = "";
                 btnClicked = 0;
             }
             else 
             {
+                WrongSound.Play();
                 input = "";
                 DisplayText.text = input.ToString();
                 btnClicked = 0;
