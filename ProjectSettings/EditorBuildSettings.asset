@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DestroyFinalChoice.unity
     guid: 8dde9402da02e5b4980074c0280638f3
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 48945ab5164353741b00d3741fb529ef
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2ae9eca632520c641b395be26f6a226b,
       type: 2}
