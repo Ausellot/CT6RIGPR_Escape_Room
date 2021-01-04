@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UVReveal
+  m_Name: UVRed
   m_Shader: {fileID: 4800000, guid: 56d1868fc022ff6478b9eba2bfb9a4a1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -61,7 +61,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.532
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightAngle: 30
     - _Metallic: 0
@@ -77,6 +77,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightDirection: {r: 0.123089775, g: -0.14026833, b: -0.98243254, a: 0}
-    - _LightPosition: {r: -0.6881803, g: 1.515954, b: 1.740644, a: 0}
+    - _LightDirection: {r: 0.94244206, g: 0.124487944, b: 0.3103326, a: 0}
+    - _LightPosition: {r: 1.7499834, g: 1.6617362, b: 1.4285777, a: 0}
   m_BuildTextureStacks: []
