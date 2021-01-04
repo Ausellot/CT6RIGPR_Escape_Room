@@ -13,7 +13,7 @@ public class LeaveChoice : MonoBehaviour
             LeaveChoiceInstructions.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-
+                SceneManager.LoadScene("LeaveFinalChoice");
             }
         }
     }

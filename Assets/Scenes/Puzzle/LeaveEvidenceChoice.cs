@@ -13,7 +13,7 @@ public class LeaveEvidenceChoice : MonoBehaviour
             LeaveEvChoiceInstructions.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-
+                SceneManager.LoadScene("EvidenceFinalChoice");
             }
         }
     }
