@@ -7207,7 +7207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1801237225}
-  speed: 2
+  speed: 4
   grav: -20
 --- !u!114 &1801237227
 MonoBehaviour:
