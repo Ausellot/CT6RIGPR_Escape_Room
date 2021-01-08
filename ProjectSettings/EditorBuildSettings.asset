@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 48945ab5164353741b00d3741fb529ef
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: dc1469591eaf84e4b872da8356ffd72c
   - enabled: 1
     path: Assets/Scenes/DestroyFinalChoice.unity
     guid: 8dde9402da02e5b4980074c0280638f3
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 48945ab5164353741b00d3741fb529ef
   - enabled: 1
     path: Assets/Scenes/EvidenceFinalChoice.unity
     guid: d415211b99960624cbe4e64dd160aca1
