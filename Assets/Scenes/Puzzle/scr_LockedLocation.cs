@@ -9,15 +9,5 @@ public class scr_LockedLocation : MonoBehaviour
     
     public byte lockType;
     public GameObject Key;
-    public bool Unlocked;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+      
 }

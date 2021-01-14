@@ -7,6 +7,7 @@ public class scr_KeyItem : MonoBehaviour
     
     public byte keyType;
     public GameObject Door1;
+    public GameObject RoomManager;
 
     void Start()
     {
@@ -26,8 +27,17 @@ public class scr_KeyItem : MonoBehaviour
                 Debug.Log("KeyContact");
                 if (hitColliders[i].GetComponent<scr_LockedLocation>().lockType == keyType)
                 {
-                    Door1.GetComponent<scr_DoorManager>().KeyInput = true;
-                    Destroy(gameObject);
+                    if (Door1 != null)
+                    {
+                        Door1.GetComponent<scr_DoorManager>().KeyInput = true;
+                        Destroy(gameObject);
+                    }
+                    if (RoomManager != null)
+                    {
+                        RoomManager.GetComponent<RoomVariables>().RoomsPowered = true;
+                        Destroy(gameObject);
+                    }
+
                 }
             }
             i++;
