@@ -18,7 +18,6 @@ public class LightController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
         {
             flashlight.enabled = true;
-            
         }
 
         else if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
@@ -43,6 +42,11 @@ public class LightController : MonoBehaviour
             {
                 flashlight.color = Color.red;
                 reveal = red;
+            }
+            else if(Input.GetKeyDown("0"))
+            {
+                flashlight.color = Color.white;
+                reveal = null;
             }
 
             reveal.SetVector("_LightPosition", flashlight.transform.position);
