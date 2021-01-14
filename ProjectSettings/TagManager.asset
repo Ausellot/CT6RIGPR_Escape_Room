@@ -10,6 +10,7 @@ TagManager:
   - LeaveEvChoice
   - LeaveChoice
   - Password
+  - Safe
   layers:
   - Default
   - TransparentFX
