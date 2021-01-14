@@ -30,7 +30,7 @@ public class Keypad : MonoBehaviour
         {
             if (input == CorrectPassword)
             {
-                Door1.GetComponent<Animator>().Play("Open Door1");
+                Door1.GetComponent<scr_DoorManager>().CodeInput = true;
                 CorrectSound.Play();
                 Debug.Log("Correct");
                 input = "";

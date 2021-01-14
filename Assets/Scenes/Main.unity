@@ -4572,8 +4572,9 @@ GameObject:
   - component: {fileID: 1219488992}
   - component: {fileID: 1219488997}
   - component: {fileID: 1219488996}
+  - component: {fileID: 1219488998}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: KeyCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4683,6 +4684,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1219488998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219488991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c685f3a163af945b3c344b6987b2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyType: 0
+  Door1: {fileID: 1350180795}
 --- !u!1 &1225632854
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,6 +5272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350180797}
   - component: {fileID: 1350180796}
+  - component: {fileID: 1350180798}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -5298,6 +5314,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350180798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350180795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f061eddd2ec9544a1ab27ffd9ecf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CodeInput: 0
+  KeyInput: 0
 --- !u!1 &1352332434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076704794677585365, guid: 70045294a035ca84db61ab88e08e5c44,
@@ -6481,6 +6511,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 468884301}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1687265367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687265366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60798068b657c74694a1d9b82510018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockType: 0
+  Key: {fileID: 0}
+  Unlocked: 0
 --- !u!4 &1687265369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e5387c0b0cb7d84d9368487539abdb7,
