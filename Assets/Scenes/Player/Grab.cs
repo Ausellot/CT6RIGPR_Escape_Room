@@ -35,7 +35,7 @@ public class Grab : MonoBehaviour
                 var ray = cam.ViewportPointToRay(Vector3.one * 0.5f);
                 RaycastHit hit;
                 
-                if (Physics.Raycast(ray, out hit, 1.5f))
+                if (Physics.Raycast(ray, out hit, 4.5f))
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
 

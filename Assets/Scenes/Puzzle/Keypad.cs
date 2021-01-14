@@ -7,6 +7,7 @@ public class Keypad : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject Door1;
+    public bool Powered;
 
     public string CorrectPassword = "123";
     public string input;
@@ -26,55 +27,61 @@ public class Keypad : MonoBehaviour
 
     void Update()
     {
-        if (btnClicked == NumOfGuesses) 
+        if (Powered)
         {
-            if (input == CorrectPassword)
+            if (btnClicked == NumOfGuesses)
             {
-                Door1.GetComponent<scr_DoorManager>().CodeInput = true;
-                CorrectSound.Play();
-                Debug.Log("Correct");
-                input = "";
-                btnClicked = 0;
-            }
-            else 
-            {
-                WrongSound.Play();
-                input = "";
-                DisplayText.text = input.ToString();
-                btnClicked = 0;
+                if (input == CorrectPassword)
+                {
+                    Door1.GetComponent<scr_DoorManager>().CodeInput = true;
+                    CorrectSound.Play();
+                    Debug.Log("Correct");
+                    input = "";
+                    btnClicked = 0;
+                }
+                else
+                {
+                    WrongSound.Play();
+                    input = "";
+                    DisplayText.text = input.ToString();
+                    btnClicked = 0;
+                }
             }
         }
     }
     void OnGUI()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Powered)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (Input.GetMouseButtonDown(0))
             {
-                var selction = hit.transform;
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (selction.CompareTag("Keypad"))
+                if (Physics.Raycast(ray, out hit, 100.0f))
                 {
-                    KeypadScreen = true;
+                    var selction = hit.transform;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                    if (selction.CompareTag("Keypad"))
                     {
                         KeypadScreen = true;
+
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            KeypadScreen = true;
+                        }
                     }
                 }
             }
-        }
 
-        if (KeypadScreen) 
-        {
-            Enable.SetActive(true);
-            Time.timeScale = 0.0f;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if (KeypadScreen)
+            {
+                Enable.SetActive(true);
+                Time.timeScale = 0.0f;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
         }
     }
 

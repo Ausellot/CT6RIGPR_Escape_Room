@@ -11,8 +11,11 @@ public class RoomVariables : MonoBehaviour
     {
         if (RoomsPowered)
         {
+            
             GameObject.Find("Celling_Fan").GetComponent<Light>().range = 30;
-            GameObject.Find("Celling_Fan(1)").GetComponent<Light>().range = 30;
+            GameObject.Find("Celling_Fan (1)").GetComponent<Light>().range = 30;
+            GameObject.Find("KeypadGameObject").GetComponent<Keypad>().Powered = true;
+            Debug.Log("Power is on!");
         }
     }
 }
