@@ -108,6 +108,7 @@ public class Keypad : MonoBehaviour
 
             default:
                 btnClicked++;
+                Debug.Log("Value Entered")
                 input += valueEntered;
                 DisplayText.text = input.ToString();
                 break;
