@@ -31,7 +31,7 @@ public class scr_KeyItem : MonoBehaviour
                     {
                         Door1.GetComponent<scr_DoorManager>().KeyInput = true;
                         Destroy(gameObject);
-                    }
+                    }                    
                     if (RoomManager != null)
                     {
                         RoomManager.GetComponent<RoomVariables>().RoomsPowered = true;

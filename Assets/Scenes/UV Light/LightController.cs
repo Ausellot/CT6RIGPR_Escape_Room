@@ -45,7 +45,7 @@ public class LightController : MonoBehaviour
             }
             else if(Input.GetKeyDown("0"))
             {
-                flashlight.color = Color.white;
+                //flashlight.color = Color.white;
                 reveal = null;
             }
 

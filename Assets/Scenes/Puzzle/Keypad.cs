@@ -7,7 +7,7 @@ public class Keypad : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject Door1;
-    public bool Powered;
+  
 
     public string CorrectPassword = "123";
     public string input;
@@ -27,8 +27,7 @@ public class Keypad : MonoBehaviour
 
     void Update()
     {
-        if (Powered)
-        {
+        
             if (btnClicked == NumOfGuesses)
             {
                 if (input == CorrectPassword)
@@ -47,12 +46,11 @@ public class Keypad : MonoBehaviour
                     btnClicked = 0;
                 }
             }
-        }
+        
     }
     void OnGUI()
     {
-        if (Powered)
-        {
+        
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;
@@ -82,7 +80,7 @@ public class Keypad : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
-        }
+        
     }
 
     public void ValueEntered(string valueEntered) 
@@ -108,7 +106,7 @@ public class Keypad : MonoBehaviour
 
             default:
                 btnClicked++;
-                Debug.Log("Value Entered")
+                Debug.Log("Value Entered");
                 input += valueEntered;
                 DisplayText.text = input.ToString();
                 break;
