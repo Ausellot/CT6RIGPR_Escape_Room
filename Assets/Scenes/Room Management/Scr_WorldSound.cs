@@ -29,6 +29,10 @@ public class Scr_WorldSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!TurnedOn)
+        {
+            Source.Stop();
+        }
         if ((!Source.isPlaying) && TurnedOn)
         {
             //if the audio is not playing and it wants to play.
@@ -114,5 +118,11 @@ public class Scr_WorldSound : MonoBehaviour
                 return null;
         }
         
+    }
+
+    public void EarlyCut()
+    {
+        //turns off a sound early.
+        Source.Stop();
     }
 }

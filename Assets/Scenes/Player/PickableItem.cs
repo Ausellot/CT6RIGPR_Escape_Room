@@ -23,7 +23,8 @@ public class PickableItem : MonoBehaviour
         if (collision.relativeVelocity.magnitude > 0.1)
         {
             GetComponent<AudioSource>().volume = CollisionForce / 8;
-            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().
+           GetComponent<AudioSource>().Play();
         }
     }
 }
