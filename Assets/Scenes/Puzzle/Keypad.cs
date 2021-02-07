@@ -27,7 +27,8 @@ public class Keypad : MonoBehaviour
 
     void Update()
     {
-        if (btnClicked == NumOfGuesses)
+        
+            if (btnClicked == NumOfGuesses)
             {
                 if (input == CorrectPassword)
                 {
@@ -45,6 +46,7 @@ public class Keypad : MonoBehaviour
                     btnClicked = 0;
                 }
             }
+        
     }
     void OnGUI()
     {
