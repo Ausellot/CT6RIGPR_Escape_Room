@@ -8,9 +8,22 @@ public class Safe : MonoBehaviour
     public GameObject Enable;
     public GameObject SafeDoor1;
 
-    public string CorrectPassword = "123";
-    public string input;
-    public Text DisplayText;
+    public string CorrectPassword1 = "12";
+    public string CorrectPassword2 = "34";
+    public string CorrectPassword3 = "56";
+
+    public int Number1;
+    public int Number3;
+    public int Number2;
+
+    public string input1;
+    public string input2;
+    public string input3;
+
+    public Text DisplayText1;
+    public Text DisplayText2;
+    public Text DisplayText3;
+
     public AudioSource CorrectSound;
     public AudioSource WrongSound;
 
@@ -21,26 +34,36 @@ public class Safe : MonoBehaviour
     void Start()
     {
         btnClicked = 0;
-        NumOfGuesses = CorrectPassword.Length;
+        //NumOfGuesses = CorrectPassword.Length;
     }
 
     void Update()
     {
+        input1 = Number1.ToString();
+        input2 = Number2.ToString();
+        input3 = Number3.ToString();
+
         if (btnClicked == NumOfGuesses)
         {
-            if (input == CorrectPassword)
+            if (input1 == CorrectPassword1 && input2 == CorrectPassword2 && input3 == CorrectPassword3)
             {
                 SafeDoor1.GetComponent<Animator>().Play("SafeOpen");
                 CorrectSound.Play();
                 Debug.Log("Correct");
-                input = "";
+                input1 = Number1.ToString();
+                input2 = Number2.ToString();
+                input3 = Number3.ToString();
                 btnClicked = 0;
             }
             else
             {
                 WrongSound.Play();
-                input = "";
-                DisplayText.text = input.ToString();
+                input1 = "00";
+                input2 = "00";
+                input3 = "00";
+                DisplayText1.text = input1.ToString();
+                DisplayText2.text = input2.ToString();
+                DisplayText3.text = input3.ToString();
                 btnClicked = 0;
             }
         }
@@ -77,7 +100,69 @@ public class Safe : MonoBehaviour
             Cursor.visible = true;
         }
     }
+    #region Up/Down
+    public void Up1()
+    {
+        Number1++;
+        if (Number1 == 100)
+        {
+            Number1 = 0;
+        }
+        input1 += Number1.ToString();
+        DisplayText1.text = Number1.ToString();
+    }
+    public void Up2()
+    {
+        Number2++;
+        if (Number2 == 100)
+        {
+            Number2 = 0;
+        }
+        input2 += Number2.ToString();
+        DisplayText2.text = Number2.ToString();
+    }
+    public void Up3()
+    {
+        Number3++;
+        if (Number3 == 100)
+        {
+            Number3 = 0;
+        }
+        input3 += Number3.ToString();
+        DisplayText3.text = Number3.ToString();
 
+    }
+    public void Down1()
+    {
+        Number1--;
+        if (Number1 == -1)
+        {
+            Number1 = 99;
+        }
+        input1 += Number1.ToString();
+        DisplayText1.text = Number1.ToString();
+    }
+    public void Down2()
+    {
+        Number2--;
+        if (Number2 == -1)
+        {
+            Number2 = 99;
+        }
+        input2 += Number2.ToString();
+        DisplayText2.text = Number2.ToString();
+    }
+    public void Down3()
+    {
+        Number3--;
+        if (Number3 == -1)
+        {
+            Number3 = 99;
+        }
+        input3 += Number3.ToString();
+        DisplayText3.text = Number3.ToString();
+    }
+    #endregion
     public void ValueEntered(string valueEntered)
     {
         switch (valueEntered)
@@ -85,26 +170,29 @@ public class Safe : MonoBehaviour
             case "Q":
                 Enable.SetActive(false);
                 btnClicked = 0;
-                input = "";
+                input1 = "00";
+                input2 = "00";
+                input3 = "00";
                 KeypadScreen = false;
-                DisplayText.text = input.ToString();
+                DisplayText1.text = input1.ToString();
+                DisplayText2.text = input2.ToString();
+                DisplayText3.text = input3.ToString();
                 Time.timeScale = 1.0f;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 break;
 
-            case "C":
-                btnClicked = 0;
-                input = "";
-                DisplayText.text = input.ToString();
-                break;
-
             default:
-                btnClicked++;
-                input += valueEntered;
-                DisplayText.text = input.ToString();
+                //btnClicked++;
+                input1 += Number1.ToString();
+                input1 += Number2.ToString();
+                input1 += Number3.ToString();
+                DisplayText1.text = Number1.ToString();
+                DisplayText2.text = Number2.ToString();
+                DisplayText3.text = Number3.ToString();
                 break;
         }
     }
 }
+
 
