@@ -8,13 +8,16 @@ public class LightController : MonoBehaviour
 
     public Light flashlight;
     public Material green,blue,red;
-    public Material reveal;
-
+    private Material reveal;
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
         {
             flashlight.enabled = true;
@@ -45,7 +48,7 @@ public class LightController : MonoBehaviour
             }
             else if(Input.GetKeyDown("0"))
             {
-                //flashlight.color = Color.white;
+                flashlight.color = Color.white;
                 reveal = null;
             }
 
