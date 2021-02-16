@@ -30,6 +30,6 @@ Material:
     - _StrengthScalar: 50
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _LightDirection: {r: -0.6432229, g: -0.27440703, b: -0.71481824, a: 0}
-    - _LightPosition: {r: 9.346547, g: 2.1588044, b: 2.5639272, a: 0}
+    - _LightDirection: {r: 0.74341244, g: 0.382818, b: -0.54844207, a: 0}
+    - _LightPosition: {r: 1.2803631, g: 1.3583534, b: 2.5354786, a: 0}
   m_BuildTextureStacks: []

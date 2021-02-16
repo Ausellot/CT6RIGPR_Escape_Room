@@ -70,13 +70,37 @@ public class Grab : MonoBehaviour
 
     void DropItem(PickableItem item)
     {
-        pickedItem = null;
+        if (CanSeeHeldItem())
+        {
+            pickedItem = null;
 
-        item.transform.SetParent(null);
+            item.transform.SetParent(null);
 
-        item.Rb.isKinematic = false;
+            item.Rb.isKinematic = false;
 
-        item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+            item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+        }
+    }
+
+    bool CanSeeHeldItem()
+    {
+        var ray = cam.ViewportPointToRay(Vector3.one * 0.5f);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 1.25f))
+        {
+            //returns if it hit something
+            Debug.Log(hit.collider.gameObject.name);
+        }
+        else
+        {
+            //it must have not hit anything
+            return true;
+        }
+
+
+
+        return false;
     }
 }
 

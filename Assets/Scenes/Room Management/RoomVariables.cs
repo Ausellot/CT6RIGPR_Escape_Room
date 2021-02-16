@@ -13,8 +13,10 @@ public class RoomVariables : MonoBehaviour
         if (RoomsPowered && (!metaUpdated))
         {
             
-            GameObject.Find("Celling_Fan").GetComponent<Light>().range = 30;
-            GameObject.Find("Celling_Fan (1)").GetComponent<Light>().range = 30;
+            GameObject.Find("FanLight1").GetComponent<Light>().range = 30;
+            GameObject.Find("FanLight2").GetComponent<Light>().range = 30;
+            //FanLight1 CellingFanRotater
+            //FanLight2 CellingFanRotater2
 
             //placeholder:
             GameObject.Find("RadioSound").GetComponent<Scr_WorldSound>().UseSoundList[0] = false;
@@ -23,6 +25,12 @@ public class RoomVariables : MonoBehaviour
 
             Debug.Log("Power is on!");
             metaUpdated = true;
+        }
+
+        if (RoomsPowered)
+        {
+            GameObject.Find("CellingFanRotater").transform.Rotate(new Vector3(0f,0f,Time.deltaTime * 15f));
+            GameObject.Find("CellingFanRotater2").transform.Rotate(new Vector3(0f, 0f, Time.deltaTime * 15f));
         }
     }
 }
