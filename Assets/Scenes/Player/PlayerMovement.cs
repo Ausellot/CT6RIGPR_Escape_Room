@@ -34,11 +34,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // take x and z
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
 
+        //updated movement calculator (Fixing diagonal Bug)
+        Vector3 MovementAngle = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        //Debug.Log(MovementAngle.ToString());
+        if (MovementAngle.magnitude > 1.0)
+        {
+            MovementAngle.Normalize();
+        }
+       
         // movement
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 move = transform.right * MovementAngle.x + transform.forward * MovementAngle.z;
 
         controller.Move(move * speed * Time.deltaTime);
 

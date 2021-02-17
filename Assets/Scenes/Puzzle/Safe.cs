@@ -7,14 +7,16 @@ public class Safe : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject SafeDoor1;
+    
 
     public string CorrectPassword1 = "12";
     public string CorrectPassword2 = "34";
     public string CorrectPassword3 = "56";
 
     public int Number1;
-    public int Number3;
     public int Number2;
+    public int Number3;
+    
 
     public string input1;
     public string input2;
@@ -33,6 +35,7 @@ public class Safe : MonoBehaviour
 
     void Start()
     {
+        
         btnClicked = 0;
         //NumOfGuesses = CorrectPassword.Length;
     }
@@ -43,6 +46,8 @@ public class Safe : MonoBehaviour
         input2 = Number2.ToString();
         input3 = Number3.ToString();
 
+        
+
         if (btnClicked == NumOfGuesses)
         {
             if (input1 == CorrectPassword1 && input2 == CorrectPassword2 && input3 == CorrectPassword3)
@@ -50,10 +55,12 @@ public class Safe : MonoBehaviour
                 SafeDoor1.GetComponent<Animator>().Play("SafeOpen");
                 CorrectSound.Play();
                 Debug.Log("Correct");
+                
                 input1 = Number1.ToString();
                 input2 = Number2.ToString();
                 input3 = Number3.ToString();
                 btnClicked = 0;
+                
             }
             else
             {

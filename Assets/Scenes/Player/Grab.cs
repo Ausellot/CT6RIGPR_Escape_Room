@@ -62,6 +62,9 @@ public class Grab : MonoBehaviour
 
         item.transform.SetParent(slot);
 
+        //allows an object to always start forward, regardless of previous rotations
+        transform.localRotation = Quaternion.Euler(90, 0, 0);
+
         item.transform.localPosition = Vector3.zero;
         item.transform.localEulerAngles = Vector3.zero;
 
@@ -79,6 +82,8 @@ public class Grab : MonoBehaviour
             item.Rb.isKinematic = false;
 
             item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+
+            
         }
     }
 
