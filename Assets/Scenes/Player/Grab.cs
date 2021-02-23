@@ -38,12 +38,13 @@ public class Grab : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, 4.5f))
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
-
-
-
+                    
                     if (pickable)
                   {
-                    PickItem(pickable);
+                        if (pickable.CanBePickedUp)
+                        {
+                            PickItem(pickable);
+                        }
                   }
                 }
 

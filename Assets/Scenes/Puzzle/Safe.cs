@@ -26,8 +26,8 @@ public class Safe : MonoBehaviour
     public Text DisplayText2;
     public Text DisplayText3;
 
-    public AudioSource CorrectSound;
-    public AudioSource WrongSound;
+    public AudioClip CorrectSound;
+    public AudioClip WrongSound;    
 
     private bool KeypadScreen;
     private float btnClicked = 0;
@@ -53,7 +53,10 @@ public class Safe : MonoBehaviour
             if (input1 == CorrectPassword1 && input2 == CorrectPassword2 && input3 == CorrectPassword3)
             {
                 SafeDoor1.GetComponent<Animator>().Play("SafeOpen");
-                CorrectSound.Play();
+                //CorrectSound.Play();
+                gameObject.GetComponent<AudioSource>().clip = CorrectSound;
+                gameObject.GetComponent<AudioSource>().Play();
+                GameObject.Find("Thief Tools").GetComponent<PickableItem>().CanBePickedUp = true;
                 Debug.Log("Safe Opening");
                 
                 input1 = Number1.ToString();
@@ -64,10 +67,10 @@ public class Safe : MonoBehaviour
             }
             else
             {
-                WrongSound.Play();
-                input1 = "00";
-                input2 = "00";
-                input3 = "00";
+                
+                //input1 = "00";
+                //input2 = "00";
+                //input3 = "00";
                 DisplayText1.text = input1.ToString();
                 DisplayText2.text = input2.ToString();
                 DisplayText3.text = input3.ToString();

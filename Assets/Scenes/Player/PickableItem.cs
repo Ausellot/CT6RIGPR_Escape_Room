@@ -10,7 +10,7 @@ public class PickableItem : MonoBehaviour
 
     private Rigidbody rb;
     public Rigidbody Rb => rb;
-    
+    public bool CanBePickedUp = true;
 
     private void Awake()
     {
