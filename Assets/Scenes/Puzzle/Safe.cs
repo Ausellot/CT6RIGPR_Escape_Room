@@ -54,7 +54,7 @@ public class Safe : MonoBehaviour
             {
                 SafeDoor1.GetComponent<Animator>().Play("SafeOpen");
                 CorrectSound.Play();
-                Debug.Log("Correct");
+                Debug.Log("Safe Opening");
                 
                 input1 = Number1.ToString();
                 input2 = Number2.ToString();

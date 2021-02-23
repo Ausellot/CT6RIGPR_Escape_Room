@@ -37,6 +37,8 @@ public class Keypad : MonoBehaviour
                     Debug.Log("Correct");
                     input = "";
                     btnClicked = 0;
+
+                enabled = false;
                 }
                 else
                 {
