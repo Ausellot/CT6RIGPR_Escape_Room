@@ -22,30 +22,55 @@ public class LightController : MonoBehaviour
 
         else if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
         {
+            if (reveal != null)
+            {
+                reveal.SetFloat("_LightAngle", 0f);
+            }
             flashlight.enabled = false;
+
         }
 
         if (flashlight.enabled == true)
         {
-
+            
             if (Input.GetKeyDown("1"))
             {
-                flashlight.color = Color.green;
+                if (reveal != null)
+                {
+                    reveal.SetFloat("_LightAngle", 0f);
+                }
+
+                flashlight.color = Color.green;                
+
                 reveal = green;
             }
             else if (Input.GetKeyDown("2"))
             {
+                if (reveal != null)
+                {
+                    reveal.SetFloat("_LightAngle", 0f);
+                }
+
                 flashlight.color = Color.blue;
                 reveal = blue;
             }
             else if (Input.GetKeyDown("3"))
             {
+                if (reveal != null)
+                {
+                    reveal.SetFloat("_LightAngle", 0f);
+                }
+
                 flashlight.color = Color.red;
                 reveal = red;
             }
             else if(Input.GetKeyDown("0"))
             {
-                //flashlight.color = Color.white;
+                if (reveal != null)
+                {
+                    reveal.SetFloat("_LightAngle", 0f);
+                }
+                flashlight.color = Color.white;
                 reveal = null;
             }
 

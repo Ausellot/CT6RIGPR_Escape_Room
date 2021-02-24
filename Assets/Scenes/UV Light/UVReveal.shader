@@ -44,7 +44,8 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             float3 direction = normalize(_LightPosition - IN.worldPos);
-            float scale = dot(direction, _LightDirection);
+            float distanceOfLight = distance(_LightPosition, IN.worldPos);           
+            float scale = dot(direction, _LightDirection) * min(max(4 / distanceOfLight, 0),1);
             float strength = scale - cos(_LightAngle * (3.14 / 360.0));
             strength = min(max(strength * _StrengthScalar, 0), 1);
 
