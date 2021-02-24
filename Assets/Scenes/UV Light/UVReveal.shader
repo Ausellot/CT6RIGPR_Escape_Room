@@ -46,7 +46,7 @@
             float3 direction = normalize(_LightPosition - IN.worldPos);
             float distanceOfLight = distance(_LightPosition, IN.worldPos);           
             float scale = dot(direction, _LightDirection) * min(max(4 / distanceOfLight, 0),1);
-            float strength = scale - cos(_LightAngle * (3.14 / 360.0));
+            float strength = scale - cos(_LightAngle * (2.85 / 360.0)); //the 2.85 is meant to be Pi, I changed it to fix a bug
             strength = min(max(strength * _StrengthScalar, 0), 1);
 
             // Albedo comes from a texture tinted by color
