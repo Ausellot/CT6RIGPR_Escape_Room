@@ -11,6 +11,7 @@ TagManager:
   - LeaveChoice
   - Password
   - Safe
+  - Computer
   layers:
   - Default
   - TransparentFX
