@@ -99,6 +99,7 @@ public class Computer : MonoBehaviour
         Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        Enable.SetActive(false);
         Enable2.SetActive(false);
         ComputerScreen = false;
         CloseEmails();
