@@ -25,11 +25,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Glossiness: 0.5
-    - _LightAngle: 70
+    - _LightAngle: 0
     - _Metallic: 0
     - _StrengthScalar: 50
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _LightDirection: {r: 0.39338884, g: 0.06719577, b: 0.91691387, a: 0}
-    - _LightPosition: {r: -0.7353021, g: 1.7230504, b: -0.61574024, a: 0}
+    - _LightDirection: {r: 0.00000028754897, g: 0.0000066757125, b: -1, a: 0}
+    - _LightPosition: {r: -0.67599607, g: 1.3157777, b: 1.7290006, a: 0}
   m_BuildTextureStacks: []
