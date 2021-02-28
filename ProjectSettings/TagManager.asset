@@ -12,6 +12,7 @@ TagManager:
   - Password
   - Safe
   - Computer
+  - EvidenceItems
   layers:
   - Default
   - TransparentFX
