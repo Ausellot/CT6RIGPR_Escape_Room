@@ -97,6 +97,11 @@ public class Grab : MonoBehaviour
         {
             //returns if it hit something
             Debug.Log(hit.collider.gameObject.name);
+            if (hit.collider.gameObject.name == transform.GetChild(0).gameObject.name)
+            {
+                return true;
+            }
+
         }
         else
         {
