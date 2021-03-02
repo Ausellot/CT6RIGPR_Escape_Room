@@ -14,70 +14,72 @@ public class LightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
+        if (transform.parent.parent.gameObject.name == "Grab")
         {
-            flashlight.enabled = true;
-        }
-
-        else if(Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
-        {
-            if (reveal != null)
+            if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
             {
-                reveal.SetFloat("_LightAngle", 0f);
+                flashlight.enabled = true;
             }
-            flashlight.enabled = false;
 
-        }
-
-        if (flashlight.enabled == true)
-        {
-            
-            if (Input.GetKeyDown("1"))
+            else if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == true)
             {
                 if (reveal != null)
                 {
                     reveal.SetFloat("_LightAngle", 0f);
                 }
+                flashlight.enabled = false;
 
-                flashlight.color = Color.green;                
-
-                reveal = green;
             }
-            else if (Input.GetKeyDown("2"))
+
+            if (flashlight.enabled == true)
             {
-                if (reveal != null)
+
+                if (Input.GetKeyDown("1"))
                 {
-                    reveal.SetFloat("_LightAngle", 0f);
+                    if (reveal != null)
+                    {
+                        reveal.SetFloat("_LightAngle", 0f);
+                    }
+
+                    flashlight.color = Color.green;
+
+                    reveal = green;
+                }
+                else if (Input.GetKeyDown("2"))
+                {
+                    if (reveal != null)
+                    {
+                        reveal.SetFloat("_LightAngle", 0f);
+                    }
+
+                    flashlight.color = Color.blue;
+                    reveal = blue;
+                }
+                else if (Input.GetKeyDown("3"))
+                {
+                    if (reveal != null)
+                    {
+                        reveal.SetFloat("_LightAngle", 0f);
+                    }
+
+                    flashlight.color = Color.red;
+                    reveal = red;
+                }
+                else if (Input.GetKeyDown("0"))
+                {
+                    if (reveal != null)
+                    {
+                        reveal.SetFloat("_LightAngle", 0f);
+                    }
+                    flashlight.color = Color.white;
+                    reveal = null;
                 }
 
-                flashlight.color = Color.blue;
-                reveal = blue;
-            }
-            else if (Input.GetKeyDown("3"))
-            {
-                if (reveal != null)
-                {
-                    reveal.SetFloat("_LightAngle", 0f);
-                }
+                reveal.SetVector("_LightPosition", flashlight.transform.position);
+                reveal.SetVector("_LightDirection", -flashlight.transform.forward);
+                reveal.SetFloat("_LightAngle", flashlight.spotAngle);
 
-                flashlight.color = Color.red;
-                reveal = red;
             }
-            else if(Input.GetKeyDown("0"))
-            {
-                if (reveal != null)
-                {
-                    reveal.SetFloat("_LightAngle", 0f);
-                }
-                flashlight.color = Color.white;
-                reveal = null;
-            }
-
-            reveal.SetVector("_LightPosition", flashlight.transform.position);
-            reveal.SetVector("_LightDirection", -flashlight.transform.forward);
-            reveal.SetFloat("_LightAngle", flashlight.spotAngle);
-
         }
     }
 }
