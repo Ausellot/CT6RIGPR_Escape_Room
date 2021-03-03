@@ -18272,6 +18272,7 @@ GameObject:
   - component: {fileID: 2496565703793979900}
   - component: {fileID: 5930879824538186682}
   - component: {fileID: 1920861451133397989}
+  - component: {fileID: 6093343032492628737}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -18279,6 +18280,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &6093343032492628737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093343032492628736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000005, y: 0.020445501, z: 0.001}
+  m_Center: {x: -1.5827406e-18, y: 0.00022281986, z: 0.01}
 --- !u!4 &6362827936322197623
 Transform:
   m_ObjectHideFlags: 0
