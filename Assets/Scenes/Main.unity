@@ -9797,7 +9797,7 @@ BoxCollider:
   m_GameObject: {fileID: 1219488991}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -9859,7 +9859,7 @@ Transform:
   m_GameObject: {fileID: 1219488991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.855, y: 2.888, z: 0.029}
-  m_LocalScale: {x: 0.25, y: 0.2, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.1, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -9888,7 +9888,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -10951,23 +10951,10 @@ BoxCollider:
   m_GameObject: {fileID: 1302877320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.000341251, y: 0.024055101, z: 0.00526373}
   m_Center: {x: -0.00011804815, y: 0.00519244, z: 0.06581113}
---- !u!65 &1302877325
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302877320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.0028412514, y: 0.024055101, z: 0.09526371}
-  m_Center: {x: -0.000118048156, y: 0.00519244, z: 0.046811122}
 --- !u!1 &1306570190
 GameObject:
   m_ObjectHideFlags: 0
@@ -12105,6 +12092,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.029870415, y: 0.029870415, z: 0.029870415}
   m_Center: {x: -0.014935234, y: 0.014935208, z: -0.014935209}
+--- !u!1 &1385475404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6439818028572568418, guid: 70045294a035ca84db61ab88e08e5c44,
+    type: 3}
+  m_PrefabInstance: {fileID: 2027846307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1385475405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385475404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b64a2e94ce90434aa01c43409c88524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KeyToDrop: {fileID: 1219488991}
 --- !u!1 &1387666761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076704793590913005, guid: 70045294a035ca84db61ab88e08e5c44,
