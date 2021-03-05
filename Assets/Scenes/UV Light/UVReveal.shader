@@ -59,6 +59,6 @@
             o.Alpha = strength * c.a;
         }
         ENDCG
-    }   
+    }
     FallBack "Diffuse"
 }

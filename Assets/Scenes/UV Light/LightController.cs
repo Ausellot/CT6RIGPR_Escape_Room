@@ -5,7 +5,6 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class LightController : MonoBehaviour
 {
-
     public Light flashlight;
     public Material green,blue,red;
     private Material reveal;
@@ -17,7 +16,6 @@ public class LightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.F) && flashlight.enabled == false)
         {
             flashlight.enabled = true;
@@ -30,7 +28,6 @@ public class LightController : MonoBehaviour
 
         if (flashlight.enabled == true)
         {
-
             if (Input.GetKeyDown("1"))
             {
                 flashlight.color = Color.green;
@@ -51,11 +48,9 @@ public class LightController : MonoBehaviour
                 flashlight.color = Color.white;
                 reveal = null;
             }
-
+        }
             reveal.SetVector("_LightPosition", flashlight.transform.position);
             reveal.SetVector("_LightDirection", -flashlight.transform.forward);
             reveal.SetFloat("_LightAngle", flashlight.spotAngle);
-
-        }
     }
 }

@@ -7,12 +7,16 @@ using UnityEngine;
 public class Grab : MonoBehaviour
 {
     public Camera cam;
-
     public Transform slot;
-
     public PickableItem pickedItem;
+    public GameObject camDevice;
 
     float rotSpeed = 200f;
+
+    void Start()
+    {
+
+    }
 
     void Update()
     {              
@@ -39,17 +43,18 @@ public class Grab : MonoBehaviour
                 {
                     var pickable = hit.transform.GetComponent<PickableItem>();
 
-
-
                     if (pickable)
-                  {
-                    PickItem(pickable);
-                  }
+                    {
+                        PickItem(pickable);
+                    }
+                    if (pickable.tag == camDevice.tag)
+                    {
+                        Destroy(camDevice);
+                    }
                 }
-
             }
         }
-        
+
     }
 
     void PickItem(PickableItem item)
@@ -64,7 +69,6 @@ public class Grab : MonoBehaviour
 
         item.transform.localPosition = Vector3.zero;
         item.transform.localEulerAngles = Vector3.zero;
-
 
     }
 
