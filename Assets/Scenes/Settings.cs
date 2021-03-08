@@ -9,6 +9,7 @@ public class Settings : MonoBehaviour
     public AudioMixer audioMixer;
     public Dropdown resDropdown;
     Resolution[] res;
+    public float mouseSen;
 
     private void Start()
     {
@@ -53,5 +54,11 @@ public class Settings : MonoBehaviour
     public void FullscreenToggle(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetSensitivity(float sens)
+    {
+        mouseSen = sens;
+        PlayerPrefs.SetFloat("sensvalue", sens);
     }
 }

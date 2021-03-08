@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Keypad : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Keypad : MonoBehaviour
     public Text DisplayText;
     public AudioSource CorrectSound;
     public AudioSource WrongSound;
+    public AudioMixerGroup mixerGroup;
 
     private bool KeypadScreen;
     private float btnClicked = 0;
@@ -23,6 +25,8 @@ public class Keypad : MonoBehaviour
     {
         btnClicked = 0;
         NumOfGuesses = CorrectPassword.Length;
+        CorrectSound.outputAudioMixerGroup = mixerGroup;
+        WrongSound.outputAudioMixerGroup = mixerGroup;
     }
 
     void Update()
