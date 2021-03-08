@@ -9,34 +9,38 @@ public class CameraShot : MonoBehaviour
     private bool takePhoto;
     private Sprite newSprite;
     private SpriteRenderer sr;
-    private Collider coll;
+    private Collider shotCollider;
 
     public GameObject camDevice;
     public Image m_display;
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
+    public bool tookPhoto;
 
     void Start()
     {
-        coll = gameObject.GetComponent<Collider>();
+        tookPhoto = false;
+        shotCollider = gameObject.GetComponent<Collider>();
     }
     void Update()
     {
-        if (camDevice == null)
+        if (camDevice == null) 
         {
-            coll.enabled = true;
+            shotCollider.enabled = true;
         }
 
         if (Input.GetKeyDown(KeyCode.K) && camDevice == null)
         {
-            if (coll.enabled == true)
+            Physics.IgnoreLayerCollision(0, 11, false);
+            if (shotCollider.enabled == true)
             {
+                tookPhoto = true;
                 takePhoto = true;
-                coll.enabled = false;
+                shotCollider.enabled = false;
             }
         }
 
-        Debug.Log("Collider.Enabled = " + coll.enabled);
+        Debug.Log("Collider.Enabled = " + shotCollider.enabled);
 
         if (itemsObj.Count >= maxItems)
         {
@@ -62,26 +66,39 @@ public class CameraShot : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision col)
     {
         GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
-        GameObject obj = collision.collider.gameObject;
-        string tagIgnore = "Untagged";
+        GameObject obj = col.collider.gameObject;
 
-        while (collision.collider == true)
+        while (col.collider == true)
         {
-            if (obj.tag == tagIgnore)
+            Physics.IgnoreLayerCollision(0, 11, true);
+            if ((obj.tag == list.tag) && tookPhoto == true)
             {
-                Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+                itemsObj.Add(col.gameObject);
+                Destroy(col.collider.gameObject);
+                tookPhoto = false;
             }
-
-            if (obj.tag == list.tag)
-            {
-                itemsObj.Add(collision.collider.gameObject);
-                Destroy(collision.collider.gameObject);
-            }
-
             break;
         }
     }
+
+    //void OnTriggerEnter(Collider col)
+    //{
+    //    GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
+    //    GameObject obj = col.GetComponent<Collider>().gameObject;
+
+    //    while(col == true)
+    //    {
+    //        if ((obj.tag == list.tag) && tookPhoto == true)
+    //        {
+    //            itemsObj.Add(col.gameObject);
+    //            list.gameObject.tag = "Untagged";
+    //            tookPhoto = false;
+    //        }
+    //        break;
+    //    }
+
+    //}
 }

@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77849991}
   - component: {fileID: 77849992}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4699,7 +4699,7 @@ GameObject:
   - component: {fileID: 857104453}
   - component: {fileID: 857104454}
   - component: {fileID: 857104455}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4800,6 +4800,7 @@ MonoBehaviour:
   camDevice: {fileID: 919132148425249145}
   m_display: {fileID: 1691494513}
   maxItems: 2
+  tookPhoto: 0
 --- !u!212 &857104454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11786,6 +11787,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EvidenceItems
       objectReference: {fileID: 0}
+    - target: {fileID: 1076704793551325167, guid: 70045294a035ca84db61ab88e08e5c44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1076704794261190753, guid: 70045294a035ca84db61ab88e08e5c44,
         type: 3}
       propertyPath: m_Layer
@@ -11795,6 +11801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: EvidenceItems
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076704794261190753, guid: 70045294a035ca84db61ab88e08e5c44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1076704794663007948, guid: 70045294a035ca84db61ab88e08e5c44,
         type: 3}
