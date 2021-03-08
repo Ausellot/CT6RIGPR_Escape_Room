@@ -9,9 +9,9 @@ public class Safe : MonoBehaviour
     public GameObject SafeDoor1;
     
 
-    public string CorrectPassword1 = "12";
-    public string CorrectPassword2 = "34";
-    public string CorrectPassword3 = "56";
+    public string CorrectPassword1 = "10";
+    public string CorrectPassword2 = "20";
+    public string CorrectPassword3 = "4";
 
     public int Number1;
     public int Number2;
