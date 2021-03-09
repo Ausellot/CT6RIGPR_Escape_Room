@@ -7,7 +7,9 @@ public class Safe : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject SafeDoor1;
-    
+
+    public AudioSource NormalClick;
+    public AudioSource CorrectClick;
 
     public string CorrectPassword1 = "10";
     public string CorrectPassword2 = "20";
@@ -116,9 +118,17 @@ public class Safe : MonoBehaviour
     public void Up1()
     {
         Number1++;
-        if (Number1 == 100)
+        if (Number1.ToString() == CorrectPassword1)
         {
-            Number1 = 0;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number1 == 100)
+            {
+                Number1 = 0;
+            }
+            NormalClick.Play();
         }
         input1 += Number1.ToString();
         DisplayText1.text = Number1.ToString();
@@ -126,9 +136,17 @@ public class Safe : MonoBehaviour
     public void Up2()
     {
         Number2++;
-        if (Number2 == 100)
+        if (Number2.ToString() == CorrectPassword2)
         {
-            Number2 = 0;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number2 == 100)
+            {
+                Number2 = 0;
+            }
+            NormalClick.Play();
         }
         input2 += Number2.ToString();
         DisplayText2.text = Number2.ToString();
@@ -136,9 +154,17 @@ public class Safe : MonoBehaviour
     public void Up3()
     {
         Number3++;
-        if (Number3 == 100)
+        if (Number3.ToString() == CorrectPassword3)
         {
-            Number3 = 0;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number3 == 100)
+            {
+                Number3 = 0;
+            }
+            NormalClick.Play();
         }
         input3 += Number3.ToString();
         DisplayText3.text = Number3.ToString();
@@ -147,9 +173,17 @@ public class Safe : MonoBehaviour
     public void Down1()
     {
         Number1--;
-        if (Number1 == -1)
+        if (Number1.ToString() == CorrectPassword1)
         {
-            Number1 = 99;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number1 == -1)
+            {
+                Number1 = 99;
+            }
+            NormalClick.Play();
         }
         input1 += Number1.ToString();
         DisplayText1.text = Number1.ToString();
@@ -157,9 +191,17 @@ public class Safe : MonoBehaviour
     public void Down2()
     {
         Number2--;
-        if (Number2 == -1)
+        if (Number2.ToString() == CorrectPassword2)
         {
-            Number2 = 99;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number2 == -1)
+            {
+                Number2 = 99;
+            }
+            NormalClick.Play();
         }
         input2 += Number2.ToString();
         DisplayText2.text = Number2.ToString();
@@ -167,9 +209,17 @@ public class Safe : MonoBehaviour
     public void Down3()
     {
         Number3--;
-        if (Number3 == -1)
+        if (Number3.ToString() == CorrectPassword3)
         {
-            Number3 = 99;
+            CorrectClick.Play();
+        }
+        else
+        {
+            if (Number3 == -1)
+            {
+                Number3 = 99;
+            }
+            NormalClick.Play();
         }
         input3 += Number3.ToString();
         DisplayText3.text = Number3.ToString();
