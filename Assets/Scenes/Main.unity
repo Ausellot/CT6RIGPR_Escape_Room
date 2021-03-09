@@ -6624,6 +6624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxItems: 2
+  otherObj: {fileID: 857104448}
+  otherScr: CameraShot
 --- !u!114 &866823574
 MonoBehaviour:
   m_ObjectHideFlags: 0

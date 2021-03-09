@@ -40,12 +40,12 @@ public class Grab : MonoBehaviour
                     var pickable = hit.transform.GetComponent<PickableItem>();
                     
                     if (pickable)
-                  {
+                    {
                         if (pickable.CanBePickedUp)
                         {
                             PickItem(pickable);
                         }
-                  }
+                    }
                 }
 
             }
