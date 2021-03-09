@@ -82,7 +82,7 @@ public class Grab : MonoBehaviour
 
             item.Rb.isKinematic = false;
 
-            item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+            item.Rb.AddForce(item.transform.parent.forward * 2, ForceMode.VelocityChange);
 
             
         }
@@ -97,6 +97,11 @@ public class Grab : MonoBehaviour
         {
             //returns if it hit something
             Debug.Log(hit.collider.gameObject.name);
+            if (hit.collider.gameObject.name == transform.GetChild(0).gameObject.name)
+            {
+                return true;
+            }
+
         }
         else
         {

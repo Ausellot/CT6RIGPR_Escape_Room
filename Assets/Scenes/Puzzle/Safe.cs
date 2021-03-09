@@ -57,6 +57,8 @@ public class Safe : MonoBehaviour
                 gameObject.GetComponent<AudioSource>().clip = CorrectSound;
                 gameObject.GetComponent<AudioSource>().Play();
                 GameObject.Find("Thief Tools").GetComponent<PickableItem>().CanBePickedUp = true;
+                GameObject.Find("Thief Tools").GetComponent<BoxCollider>().enabled = true;
+                GameObject.Find("Thief Tools").GetComponent<Rigidbody>().useGravity = true;
                 Debug.Log("Safe Opening");
                 
                 input1 = Number1.ToString();
@@ -85,7 +87,7 @@ public class Safe : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (Physics.Raycast(ray, out hit, 1.0f))
             {
                 var selction = hit.transform;
 
