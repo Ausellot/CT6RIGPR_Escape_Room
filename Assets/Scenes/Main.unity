@@ -900,7 +900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 77849991}
   - component: {fileID: 77849992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6445,7 +6445,8 @@ GameObject:
   - component: {fileID: 857104449}
   - component: {fileID: 857104452}
   - component: {fileID: 857104453}
-  m_Layer: 0
+  - component: {fileID: 857104454}
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6547,6 +6548,19 @@ MonoBehaviour:
   m_display: {fileID: 1011241821938239626}
   maxItems: 2
   tookPhoto: 0
+--- !u!65 &857104454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857104448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 2}
 --- !u!1 &866373162
 GameObject:
   m_ObjectHideFlags: 0
