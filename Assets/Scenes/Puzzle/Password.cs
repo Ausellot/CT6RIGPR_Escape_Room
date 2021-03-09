@@ -124,7 +124,7 @@ public class Password : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 1.75f))
+            if (Physics.Raycast(ray, out hit, 2.25f))
             {
                 var selction = hit.transform;
 
