@@ -39,7 +39,7 @@ public class CameraShot : MonoBehaviour
             Physics.IgnoreLayerCollision(0, 11, false);
             if (shotCollider.enabled == true)
             {
-                GameObject.Find("firebin").GetComponent<Barrel>().enabled = false;
+                GameObject.Find("FireBarrel").GetComponent<Barrel>().enabled = false;
                 tookPhoto = true;
                 takePhoto = true;
             }
