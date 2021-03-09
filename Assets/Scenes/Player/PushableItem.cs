@@ -27,7 +27,7 @@ public class PushableItem : MonoBehaviour
                 if (Item)
                 {
                     hit.transform.GetComponent<Rigidbody>().isKinematic = false;
-                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward * 1, ForceMode.VelocityChange);
+                    hit.transform.GetComponent<Rigidbody>().AddForce(transform.forward + (Vector3.up * 0.2f), ForceMode.Impulse);
                 }
 
 
