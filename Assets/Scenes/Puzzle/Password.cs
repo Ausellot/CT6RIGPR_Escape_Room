@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Password : MonoBehaviour
 {
+    public GameObject Computer;
+    public GameObject Homescreen;
     public GameObject Enable;
     public GameObject Enable2;
     public GameObject Enable3;
@@ -119,188 +121,195 @@ public class Password : MonoBehaviour
     }
     void OnGUI()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Computer.activeInHierarchy && !Homescreen.activeInHierarchy) 
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+<<<<<<< HEAD
             if (Physics.Raycast(ray, out hit, 2.25f))
+=======
+            if (Input.GetMouseButtonDown(0))
+>>>>>>> Joseph-Bug-Fixes
             {
-                var selction = hit.transform;
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (selction.CompareTag("Password"))
+                if (Physics.Raycast(ray, out hit, 100.0f))
                 {
-                    PasswordScreen = true;
+                    var selction = hit.transform;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                    if (selction.CompareTag("Password"))
                     {
                         PasswordScreen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note1"))
-                {
-                    Note1Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            PasswordScreen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note1"))
                     {
                         Note1Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note2"))
-                {
-                    Note2Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note1Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note2"))
                     {
                         Note2Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note3"))
-                {
-                    Note3Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note2Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note3"))
                     {
                         Note3Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note4"))
-                {
-                    Note4Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note3Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note4"))
                     {
                         Note4Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note5"))
-                {
-                    Note5Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note4Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note5"))
                     {
                         Note5Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note6"))
-                {
-                    Note6Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note5Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note6"))
                     {
                         Note6Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note7"))
-                {
-                    Note7Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note6Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note7"))
                     {
                         Note7Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note8"))
-                {
-                    Note8Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note7Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note8"))
                     {
                         Note8Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note9"))
-                {
-                    Note9Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note8Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note9"))
                     {
                         Note9Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note10"))
-                {
-                    Note10Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note9Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note10"))
                     {
                         Note10Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note11"))
-                {
-                    Note11Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note10Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note11"))
                     {
                         Note11Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note12"))
-                {
-                    Note12Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note11Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note12"))
                     {
                         Note12Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note13"))
-                {
-                    Note13Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note12Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note13"))
                     {
                         Note13Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note14"))
-                {
-                    Note14Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note13Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note14"))
                     {
                         Note14Screen = true;
-                    }
-                }
-                 if (selction.CompareTag("Note15"))
-                {
-                    Note15Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note14Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note15"))
                     {
                         Note15Screen = true;
-                    }
-                }
-                if (selction.CompareTag("Note16"))
-                {
-                    Note16Screen = true;
 
-                    var selectionRender = selction.GetComponent<Renderer>();
-                    if (selectionRender != null)
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note15Screen = true;
+                        }
+                    }
+                    if (selction.CompareTag("Note16"))
                     {
                         Note16Screen = true;
+
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note16Screen = true;
+                        }
                     }
                 }
             }
         }
-
         if (PasswordScreen)
         {
             Enable.SetActive(true);
