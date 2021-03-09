@@ -17,6 +17,8 @@ public class CameraShot : MonoBehaviour
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
     public bool tookPhoto;
+    public GameObject otherObj;
+    public string otherScr;
 
     void Start()
     {
@@ -39,6 +41,7 @@ public class CameraShot : MonoBehaviour
             Physics.IgnoreLayerCollision(0, 11, false);
             if (shotCollider.enabled == true)
             {
+                GameObject.Find("firebin").GetComponent<Barrel>().enabled = false;
                 tookPhoto = true;
                 takePhoto = true;
             }
@@ -56,6 +59,7 @@ public class CameraShot : MonoBehaviour
     {
         if (takePhoto)
         {
+            
             Texture2D text = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
             text.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, false);
             text.Apply();
@@ -82,7 +86,7 @@ public class CameraShot : MonoBehaviour
             {
                 itemsObj.Add(col.gameObject);
                 list.transform.gameObject.tag = "Untagged";
-                //Destroy(col.collider.gameObject);
+                
                 shotCollider.enabled = false;
                 tookPhoto = false;
             }

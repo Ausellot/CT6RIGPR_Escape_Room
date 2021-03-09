@@ -4801,6 +4801,8 @@ MonoBehaviour:
   m_display: {fileID: 1691494513}
   maxItems: 2
   tookPhoto: 0
+  otherObj: {fileID: 3344293430638743068}
+  otherScr: Barrel
 --- !u!212 &857104454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12409,6 +12411,7 @@ MonoBehaviour:
   DisplayText: {fileID: 704833086}
   CorrectSound: {fileID: 590039311}
   WrongSound: {fileID: 840697072}
+  mixerGroup: {fileID: 0}
 --- !u!4 &2496565703793979900
 Transform:
   m_ObjectHideFlags: 0
@@ -12470,6 +12473,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxItems: 2
+  otherObj: {fileID: 857104448}
+  otherScr: CameraShot
 --- !u!65 &3344293430638743070
 BoxCollider:
   m_ObjectHideFlags: 0

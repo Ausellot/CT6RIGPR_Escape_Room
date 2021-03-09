@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Keypad : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject Door1;
-  
+
 
     public string CorrectPassword = "123";
     public string input;
     public Text DisplayText;
     public AudioSource CorrectSound;
     public AudioSource WrongSound;
+    public AudioMixerGroup mixerGroup;
 
     private bool KeypadScreen;
     private float btnClicked = 0;
@@ -23,6 +25,8 @@ public class Keypad : MonoBehaviour
     {
         btnClicked = 0;
         NumOfGuesses = CorrectPassword.Length;
+        CorrectSound.outputAudioMixerGroup = mixerGroup;
+        WrongSound.outputAudioMixerGroup = mixerGroup;
     }
 
     void Update()
@@ -37,6 +41,8 @@ public class Keypad : MonoBehaviour
                     Debug.Log("Correct");
                     input = "";
                     btnClicked = 0;
+
+                enabled = false;
                 }
                 else
                 {
@@ -56,7 +62,7 @@ public class Keypad : MonoBehaviour
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                if (Physics.Raycast(ray, out hit, 1.0f))
                 {
                     var selction = hit.transform;
 
