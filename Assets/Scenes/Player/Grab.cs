@@ -10,12 +10,13 @@ public class Grab : MonoBehaviour
     public Transform slot;
     public PickableItem pickedItem;
     public GameObject camDevice;
+    private bool camDestroyed;
 
     float rotSpeed = 200f;
 
     void Start()
     {
-
+        camDestroyed = false;
     }
 
     void Update()
@@ -47,9 +48,12 @@ public class Grab : MonoBehaviour
                     {
                         PickItem(pickable);
                     }
-                    if (pickable.tag == camDevice.tag)
+
+                    if ((pickable.tag == camDevice.tag) && camDestroyed == false)
                     {
                         Destroy(camDevice);
+                        camDestroyed = true;
+                        pickedItem = null;
                     }
                 }
             }

@@ -10,6 +10,7 @@ public class CameraShot : MonoBehaviour
     private Sprite newSprite;
     private SpriteRenderer sr;
     private Collider shotCollider;
+    private Camera cam;
 
     public GameObject camDevice;
     public Image m_display;
@@ -21,22 +22,24 @@ public class CameraShot : MonoBehaviour
     {
         tookPhoto = false;
         shotCollider = gameObject.GetComponent<Collider>();
+        cam = gameObject.GetComponent<Camera>();  
     }
+
     void Update()
     {
-        if (camDevice == null) 
+        if(camDevice == null)
         {
-            shotCollider.enabled = true;
+            shotCollider.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.K) && camDevice == null)
         {
+            shotCollider.enabled = true;
             Physics.IgnoreLayerCollision(0, 11, false);
             if (shotCollider.enabled == true)
             {
                 tookPhoto = true;
                 takePhoto = true;
-                shotCollider.enabled = false;
             }
         }
 
@@ -61,11 +64,11 @@ public class CameraShot : MonoBehaviour
             if (m_display != null)
             {
                 m_display.sprite = newSprite;
-
                 takePhoto = false;
             }
         }
     }
+
     void OnCollisionEnter(Collision col)
     {
         GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
@@ -74,12 +77,15 @@ public class CameraShot : MonoBehaviour
         while (col.collider == true)
         {
             Physics.IgnoreLayerCollision(0, 11, true);
-            if ((obj.tag == list.tag) && tookPhoto == true)
+            if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true)
             {
                 itemsObj.Add(col.gameObject);
-                Destroy(col.collider.gameObject);
+                list.transform.gameObject.tag = "Untagged";
+                //Destroy(col.collider.gameObject);
+                shotCollider.enabled = false;
                 tookPhoto = false;
             }
+            
             break;
         }
     }
