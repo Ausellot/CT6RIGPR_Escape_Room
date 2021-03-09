@@ -23,7 +23,7 @@ public class CameraShot : MonoBehaviour
         itemsObj = new List<GameObject>();
         tookPhoto = false;
         shotCollider = gameObject.GetComponent<Collider>();
-        cam = gameObject.GetComponent<Camera>();  
+        cam = gameObject.GetComponent<Camera>();
     }
 
     void Update()
@@ -80,15 +80,14 @@ public class CameraShot : MonoBehaviour
         while (col.collider == true)
         {
             Physics.IgnoreLayerCollision(0, 11, true);
-            if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true)
+            if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged"))
             {
                 itemsObj.Add(col.gameObject);
-                list.transform.gameObject.tag = "Untagged";
-                
+                //list.transform.gameObject.tag = "Untagged";
+                obj.gameObject.tag = "Untagged";
                 shotCollider.enabled = false;
                 tookPhoto = false;
             }
-            
             break;
         }
     }
