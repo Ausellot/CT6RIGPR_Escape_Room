@@ -17,8 +17,6 @@ public class CameraShot : MonoBehaviour
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
     public bool tookPhoto;
-    public GameObject otherObj;
-    public string otherScr;
 
     void Start()
     {
