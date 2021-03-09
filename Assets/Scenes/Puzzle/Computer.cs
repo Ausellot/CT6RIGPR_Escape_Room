@@ -35,7 +35,6 @@ public class Computer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -91,11 +90,14 @@ public class Computer : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-
     }
 
     public void CloseComputer()
     {
+        if (!Homescreen)
+        {
+            PasswordField.text = "";
+        }
         Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
