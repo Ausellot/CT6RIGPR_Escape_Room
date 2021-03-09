@@ -936,7 +936,7 @@ MonoBehaviour:
   cam: {fileID: 857104450}
   slot: {fileID: 77849991}
   pickedItem: {fileID: 0}
-  camDevice: {fileID: 0}
+  camDevice: {fileID: 4821518436217614075}
 --- !u!1 &87182230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076704794601621745, guid: 70045294a035ca84db61ab88e08e5c44,
@@ -19387,7 +19387,7 @@ GameObject:
   - component: {fileID: 4821518436217614076}
   m_Layer: 0
   m_Name: camDevice
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -29,6 +29,7 @@ TagManager:
   - Note14
   - Note15
   - Note16
+  - Camera
   layers:
   - Default
   - TransparentFX
