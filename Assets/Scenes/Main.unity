@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 60867103}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 0}
   Enable3: {fileID: 0}
@@ -848,8 +848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -940,7 +940,7 @@ MonoBehaviour:
   cam: {fileID: 857104450}
   slot: {fileID: 77849991}
   pickedItem: {fileID: 0}
-  camDevice: {fileID: 4821518436217614075}
+  camDevice: {fileID: 0}
 --- !u!1 &87182230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076704794601621745, guid: 70045294a035ca84db61ab88e08e5c44,
@@ -1004,8 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -1220,8 +1220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -1341,8 +1341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -2739,8 +2739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -3673,8 +3673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -4756,8 +4756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -4907,8 +4907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -5873,8 +5873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -6681,8 +6681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxItems: 2
-  otherObj: {fileID: 857104448}
-  otherScr: CameraShot
+  otherObj: {fileID: 0}
+  otherScr: 
 --- !u!114 &866823574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12294,8 +12294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -12666,8 +12666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -12816,25 +12816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537256620}
   m_CullTransparentMesh: 0
---- !u!1 &1545680113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4822939896429061432, guid: 70045294a035ca84db61ab88e08e5c44,
-    type: 3}
-  m_PrefabInstance: {fileID: 2027846307}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1545680114
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545680113}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07103823, y: 0.40976602, z: 0.8378032}
-  m_Center: {x: 0.035519198, y: 0.20488366, z: -0.4189016}
 --- !u!1 &1551659387
 GameObject:
   m_ObjectHideFlags: 0
@@ -15439,8 +15420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enable: {fileID: 1763324138}
   SafeDoor1: {fileID: 1892616476}
-  NormalClick: {fileID: 1064505633}
-  CorrectClick: {fileID: 1920512907}
+  NormalClick: {fileID: 0}
+  CorrectClick: {fileID: 0}
   CorrectPassword1: 10
   CorrectPassword2: 20
   CorrectPassword3: 4
@@ -16622,8 +16603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -17646,8 +17627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -17804,8 +17785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -17917,8 +17898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -18018,8 +17999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a5a147359080141b8041d420675e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Computer: {fileID: 936115460}
-  Homescreen: {fileID: 450402967}
+  Computer: {fileID: 0}
+  Homescreen: {fileID: 0}
   Enable: {fileID: 959946766}
   Enable2: {fileID: 1002826244}
   Enable3: {fileID: 1130932643}
@@ -28465,7 +28446,6 @@ GameObject:
   - component: {fileID: 6556617841961676062}
   - component: {fileID: 7877379198372946619}
   - component: {fileID: 5383743210537539185}
-  - component: {fileID: 6734975245128270861}
   m_Layer: 0
   m_Name: Carpet
   m_TagString: Untagged
@@ -32714,20 +32694,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.020901347, y: 0.02173726, z: 0.020928849}
   m_Center: {x: 0.000000011629844, y: -0.00039469375, z: 0.00014359463}
---- !u!64 &6734975245128270861
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5887921724073015204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: fc7e20b6105a8df489c38b7fa6919a43, type: 3}
 --- !u!64 &6734975245286670210
 MeshCollider:
   m_ObjectHideFlags: 0
