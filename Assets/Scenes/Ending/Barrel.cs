@@ -8,6 +8,10 @@ public class Barrel : MonoBehaviour
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
 
+    void Start()
+    {
+        itemsObj = new List<GameObject>();
+    }
 
     void Update()
     {
