@@ -20,6 +20,7 @@ public class CameraShot : MonoBehaviour
 
     void Start()
     {
+        itemsObj = new List<GameObject>();
         tookPhoto = false;
         shotCollider = gameObject.GetComponent<Collider>();
         cam = gameObject.GetComponent<Camera>();  
