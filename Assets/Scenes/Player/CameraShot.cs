@@ -45,7 +45,7 @@ public class CameraShot : MonoBehaviour
             }
         }
 
-        Debug.Log("Collider.Enabled = " + shotCollider.enabled);
+       // Debug.Log("Collider.Enabled = " + shotCollider.enabled);
 
         if (itemsObj.Count >= maxItems)
         {
