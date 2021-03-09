@@ -15420,8 +15420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enable: {fileID: 1763324138}
   SafeDoor1: {fileID: 1892616476}
-  NormalClick: {fileID: 0}
-  CorrectClick: {fileID: 0}
+  NormalClick: {fileID: 1064505633}
+  CorrectClick: {fileID: 1920512907}
   CorrectPassword1: 10
   CorrectPassword2: 20
   CorrectPassword3: 4
