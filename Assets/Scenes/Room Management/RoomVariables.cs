@@ -21,7 +21,7 @@ public class RoomVariables : MonoBehaviour
             //placeholder:
             GameObject.Find("RadioSound").GetComponent<Scr_WorldSound>().UseSoundList[0] = false;
             GameObject.Find("RadioSound").GetComponent<Scr_WorldSound>().UseSoundList[1] = true;
-            GameObject.Find("RadioSound").GetComponent<Scr_WorldSound>().EarlyCut();
+            //GameObject.Find("RadioSound").GetComponent<Scr_WorldSound>().EarlyCut();
 
             Debug.Log("Power is on!");
             metaUpdated = true;
