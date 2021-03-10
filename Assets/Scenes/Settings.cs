@@ -10,11 +10,13 @@ public class Settings : MonoBehaviour
     public Dropdown resDropdown;
     Resolution[] res;
     public float mouseSen;
+    public Slider VolumeSlider;
 
     private void Start()
     {
         res = Screen.resolutions;
         resDropdown.ClearOptions();
+        VolumeSlider.value = PlayerPrefs.GetFloat("GameVolume", 1f);
 
         List<string> options = new List<string>();
 
@@ -33,6 +35,7 @@ public class Settings : MonoBehaviour
         resDropdown.AddOptions(options);
         resDropdown.value = currentResIndex;
         resDropdown.RefreshShownValue();
+        
     }
 
     public void SetResolution(int resIndex)
@@ -43,7 +46,8 @@ public class Settings : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("MixerVolume", volume);
+        audioMixer.SetFloat("MixerVolume", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("GameVolume", volume);
     }
     
     public void SetGraphic(int qIndex)

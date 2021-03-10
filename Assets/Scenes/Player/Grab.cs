@@ -34,7 +34,6 @@ public class Grab : MonoBehaviour
             {
                 DropItem(pickedItem);
             }
-
             else
             {
                 var ray = cam.ViewportPointToRay(Vector3.one * 0.5f);
