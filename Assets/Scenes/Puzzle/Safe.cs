@@ -10,6 +10,7 @@ public class Safe : MonoBehaviour
 
     public AudioSource NormalClick;
     public AudioSource CorrectClick;
+    public AudioSource OpenSound;
 
     public string CorrectPassword1 = "10";
     public string CorrectPassword2 = "20";
@@ -18,7 +19,8 @@ public class Safe : MonoBehaviour
     public int Number1;
     public int Number2;
     public int Number3;
-    
+
+    public bool PasswordIsCorrect;
 
     public string input1;
     public string input2;
@@ -62,7 +64,9 @@ public class Safe : MonoBehaviour
                 GameObject.Find("Thief Tools").GetComponent<BoxCollider>().enabled = true;
                 GameObject.Find("Thief Tools").GetComponent<Rigidbody>().useGravity = true;
                 Debug.Log("Safe Opening");
-                
+
+                PasswordIsCorrect = true;
+
                 input1 = Number1.ToString();
                 input2 = Number2.ToString();
                 input3 = Number3.ToString();
@@ -230,6 +234,10 @@ public class Safe : MonoBehaviour
         switch (valueEntered)
         {
             case "Q":
+                if (PasswordIsCorrect)
+                {
+                    OpenSound.Play();
+                }
                 Enable.SetActive(false);
                 btnClicked = 0;
                 input1 = "00";

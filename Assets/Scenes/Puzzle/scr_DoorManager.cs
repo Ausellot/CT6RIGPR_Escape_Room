@@ -8,6 +8,9 @@ public class scr_DoorManager : MonoBehaviour
 
     public bool CodeInput;
     public bool KeyInput;
+
+    public AudioSource OpenSound;
+
     bool DoorHasOpened;
     void Start()
     {
@@ -27,5 +30,6 @@ public class scr_DoorManager : MonoBehaviour
     void DoorOpen()
     {
         GetComponent<Animator>().Play("Open Door1");
+        OpenSound.Play();
     }
 }
