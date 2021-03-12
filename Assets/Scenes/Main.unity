@@ -3465,7 +3465,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9e5387c0b0cb7d84d9368487539abdb7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e5387c0b0cb7d84d9368487539abdb7, type: 3}
@@ -6576,6 +6576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593fb70307a756c438f922ddc8c2d1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSen: 0
+  settings: {fileID: 0}
   player: {fileID: 1801237224}
 --- !u!114 &857104453
 MonoBehaviour:
@@ -11695,7 +11697,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9e5387c0b0cb7d84d9368487539abdb7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e5387c0b0cb7d84d9368487539abdb7, type: 3}
@@ -27806,7 +27808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &5887921723594784000
 Rigidbody:
   m_ObjectHideFlags: 0

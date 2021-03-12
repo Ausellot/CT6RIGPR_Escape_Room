@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+
 public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public Dropdown resDropdown;
     Resolution[] res;
-    public float mouseSen;
+    public static float camSen;
 
     private void Start()
-    {
+    { 
         res = Screen.resolutions;
         resDropdown.ClearOptions();
 
@@ -58,7 +59,6 @@ public class Settings : MonoBehaviour
 
     public void SetSensitivity(float sens)
     {
-        mouseSen = sens;
-        PlayerPrefs.SetFloat("sensvalue", sens);
+        camSen = sens;
     }
 }
