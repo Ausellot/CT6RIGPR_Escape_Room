@@ -30,6 +30,7 @@ TagManager:
   - Note15
   - Note16
   - Camera
+  - DrawersLock
   layers:
   - Default
   - TransparentFX
