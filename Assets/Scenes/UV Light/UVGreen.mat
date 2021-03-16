@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: ae6bdd461853c8e44806bbe870ba89b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -30,6 +30,6 @@ Material:
     - _StrengthScalar: 50
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _LightDirection: {r: -0.93508244, g: 0.11894926, b: 0.33387586, a: 0}
-    - _LightPosition: {r: 11.340426, g: 1.6542511, b: -0.19969833, a: 0}
+    - _LightDirection: {r: -0.35816276, g: 0.27853033, b: -0.8911455, a: 0}
+    - _LightPosition: {r: -1.4134445, g: 1.4457955, b: 1.7517709, a: 0}
   m_BuildTextureStacks: []
