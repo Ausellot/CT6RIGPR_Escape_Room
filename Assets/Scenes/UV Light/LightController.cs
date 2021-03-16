@@ -9,6 +9,7 @@ public class LightController : MonoBehaviour
     public Light flashlight;
     public Material green,blue,red;
     public Material reveal;
+    public bool UVTorch;
 
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class LightController : MonoBehaviour
 
             }
 
-            if (flashlight.enabled == true)
+            if (flashlight.enabled == true && UVTorch)
             {
 
                 if (Input.GetKeyDown("1"))
