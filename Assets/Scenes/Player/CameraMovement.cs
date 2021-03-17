@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     float rotX;
-    public float mouseSen;
+    public float mouseSen = 400f;
     public Camera cam;
     public Transform player;
 

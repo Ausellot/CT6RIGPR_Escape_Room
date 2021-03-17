@@ -6576,6 +6576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593fb70307a756c438f922ddc8c2d1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSen: 400
   cam: {fileID: 857104450}
   player: {fileID: 1801237224}
 --- !u!114 &857104453
