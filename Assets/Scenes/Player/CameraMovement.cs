@@ -16,6 +16,10 @@ public class CameraMovement : MonoBehaviour
         {
             mouseSen = Settings.camSen;
         }
+        if(cam.fieldOfView == 0)
+        {
+            cam.fieldOfView = Settings.fov;
+        }
         
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -38,11 +42,5 @@ public class CameraMovement : MonoBehaviour
 
         // rotate left and right
         player.Rotate(Vector3.up * mouseX);
-    }
-
-    void Awake()
-    {
-        cam.fieldOfView = Settings.fov;
-        //cam.fieldOfView = 90f;
     }
 }
