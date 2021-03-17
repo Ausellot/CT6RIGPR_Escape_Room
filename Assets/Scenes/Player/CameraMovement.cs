@@ -5,13 +5,15 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     float rotX;
-    public float mouseSen = 400f;
+    public static float mouseSen;
+    public Camera cam;
     public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
         mouseSen = Settings.camSen;
+        
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -21,7 +23,6 @@ public class CameraMovement : MonoBehaviour
         // mouse input
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSen;
         float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSen;
-
   
         // rotate cam up and down
         rotX -= mouseY;
@@ -29,9 +30,15 @@ public class CameraMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(rotX, 0f, 0f);
 
         Debug.Log(mouseSen);
+        Debug.Log(cam.fieldOfView);
 
         // rotate left and right
         player.Rotate(Vector3.up * mouseX);
+    }
 
+    void Awake()
+    {
+        cam.fieldOfView = Settings.fov;
+        //cam.fieldOfView = 90f;
     }
 }

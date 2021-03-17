@@ -6576,8 +6576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593fb70307a756c438f922ddc8c2d1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSen: 0
-  settings: {fileID: 0}
+  cam: {fileID: 857104450}
   player: {fileID: 1801237224}
 --- !u!114 &857104453
 MonoBehaviour:
@@ -32837,7 +32836,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02138946, y: 0.021342687, z: 0.0586531}
+  m_Size: {x: 0.02938946, y: 0.021342687, z: 0.0586531}
   m_Center: {x: 0.000027219312, y: -0.00012262417, z: 0.018463332}
 --- !u!64 &6734975245531514412
 MeshCollider:

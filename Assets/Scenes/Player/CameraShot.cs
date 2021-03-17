@@ -83,7 +83,6 @@ public class CameraShot : MonoBehaviour
             if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged"))
             {
                 itemsObj.Add(col.gameObject);
-                //list.transform.gameObject.tag = "Untagged";
                 obj.gameObject.tag = "Untagged";
                 shotCollider.enabled = false;
                 tookPhoto = false;
@@ -91,22 +90,4 @@ public class CameraShot : MonoBehaviour
             break;
         }
     }
-
-    //void OnTriggerEnter(Collider col)
-    //{
-    //    GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
-    //    GameObject obj = col.GetComponent<Collider>().gameObject;
-
-    //    while(col == true)
-    //    {
-    //        if ((obj.tag == list.tag) && tookPhoto == true)
-    //        {
-    //            itemsObj.Add(col.gameObject);
-    //            list.gameObject.tag = "Untagged";
-    //            tookPhoto = false;
-    //        }
-    //        break;
-    //    }
-
-    //}
 }

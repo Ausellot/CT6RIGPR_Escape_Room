@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Dropdown resDropdown;
+    public TMP_Dropdown resDropdown;
     Resolution[] res;
     public static float camSen;
+    public static float fov;
 
     private void Start()
-    { 
+    {
+        camSen = 400f;
+        fov = 60f;
         res = Screen.resolutions;
         resDropdown.ClearOptions();
 
@@ -60,5 +64,10 @@ public class Settings : MonoBehaviour
     public void SetSensitivity(float sens)
     {
         camSen = sens;
+    }
+
+    public void SetFOV(float fieldOfView)
+    {
+        fov = fieldOfView;
     }
 }
