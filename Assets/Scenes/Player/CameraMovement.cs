@@ -5,15 +5,18 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     float rotX;
-    public static float mouseSen;
+    public float mouseSen = 400f;
     public Camera cam;
     public Transform player;
 
     // Start is called before the first frame update
     void Start()
     {
-        mouseSen = Settings.camSen;
-        
+        if (mouseSen == 0)
+        {
+            mouseSen = Settings.camSen;
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
