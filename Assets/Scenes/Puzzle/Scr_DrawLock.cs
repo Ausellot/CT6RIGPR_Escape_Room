@@ -71,6 +71,8 @@ public class Scr_DrawLock : MonoBehaviour
                 Opening = true;
                 input1 = Number1.ToString();               
                 input3 = Number3.ToString();
+                DisplayText1.text = Number1.ToString();
+                DisplayText3.text = Number3.ToString();
                 btnClicked = 0;
 
             }
@@ -194,6 +196,7 @@ public class Scr_DrawLock : MonoBehaviour
         }
         input3 += Number3.ToString();
         DisplayText3.text = Number3.ToString();
+        Debug.Log("Down, now " + Number3.ToString());
     }
     #endregion
     public void ValueEntered(string valueEntered)
