@@ -9,10 +9,7 @@ public class scr_KeyItem : MonoBehaviour
     public GameObject Door1;
     public GameObject RoomManager;
 
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()

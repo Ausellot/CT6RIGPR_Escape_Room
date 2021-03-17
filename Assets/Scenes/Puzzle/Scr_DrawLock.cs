@@ -13,9 +13,9 @@ public class Scr_DrawLock : MonoBehaviour
     public AudioSource NormalClick;
     public AudioSource CorrectClick;
 
-    public string CorrectPassword1 = "10";
+    public string CorrectPassword1 = "18";
    
-    public string CorrectPassword3 = "4";
+    public string CorrectPassword3 = "70";
 
     public int Number1;
    
@@ -30,16 +30,12 @@ public class Scr_DrawLock : MonoBehaviour
     
     public Text DisplayText3;
 
-    public AudioClip CorrectSound;
-    public AudioClip WrongSound;
-
     private bool KeypadScreen;
     private float btnClicked = 0;
     private float NumOfGuesses;
 
     void Start()
     {
-
         btnClicked = 0;
         //NumOfGuesses = CorrectPassword.Length;
     }
@@ -223,7 +219,7 @@ public class Scr_DrawLock : MonoBehaviour
                 //btnClicked++;
                 input1 += Number1.ToString();
              
-                input1 += Number3.ToString();
+                input3 += Number3.ToString();
                 DisplayText1.text = Number1.ToString();
                 
                 DisplayText3.text = Number3.ToString();
