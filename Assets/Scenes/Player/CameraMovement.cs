@@ -12,6 +12,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Pause.gameIsPaused = false;
         mouseSen = Settings.camSen;
         cam.fieldOfView = Settings.fov;
 
