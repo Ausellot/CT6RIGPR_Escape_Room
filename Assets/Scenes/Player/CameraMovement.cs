@@ -17,6 +17,7 @@ public class CameraMovement : MonoBehaviour
         cam.fieldOfView = Settings.fov;
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

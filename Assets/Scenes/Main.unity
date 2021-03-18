@@ -23065,7 +23065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37420,7 +37420,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02138946, y: 0.021342687, z: 0.0586531}
+  m_Size: {x: 0.02938946, y: 0.021342687, z: 0.0586531}
   m_Center: {x: 0.000027219312, y: -0.00012262417, z: 0.018463332}
 --- !u!64 &6734975245531514412
 MeshCollider:
