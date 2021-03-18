@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     float rotX;
-    public float mouseSen = 400f;
+    public float mouseSen;
     public Camera cam;
     public Transform player;
 
@@ -13,17 +13,24 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
 
-        
+        mouseSen = Settings.camSen;
+        cam.fieldOfView = Settings.fov;
 
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
-    {        
-        mouseSen = Settings.camSen;
-        cam.fieldOfView = Settings.fov;
+    {   
+        if(mouseSen == 0)
+        {
+            mouseSen = 400f;
+        }
 
+        if(cam.fieldOfView <= 10)
+        {
+            cam.fieldOfView = 60f;
+        }
         // mouse input
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSen;
         float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSen;
