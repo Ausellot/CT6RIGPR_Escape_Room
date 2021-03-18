@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-using TMPro;
 
 public class Keypad : MonoBehaviour
 {
@@ -13,8 +12,7 @@ public class Keypad : MonoBehaviour
 
     public string CorrectPassword = "123";
     public string input;
-    //public Text DisplayText;
-    public TMP_Text DisplayText;
+    public Text DisplayText;
     public AudioSource CorrectSound;
     public AudioSource WrongSound;
     public AudioMixerGroup mixerGroup;
