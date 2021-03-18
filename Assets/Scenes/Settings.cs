@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Dropdown resDropdown;
+    public TMP_Dropdown resDropdown;
     Resolution[] res;
-    public float mouseSen;
-    public Slider VolumeSlider;
+    public static float camSen;
+    public static float fov;
 
     private void Start()
     {
+        camSen = 400f;
+        fov = 60f;
         res = Screen.resolutions;
         resDropdown.ClearOptions();
-        VolumeSlider.value = PlayerPrefs.GetFloat("GameVolume", 1f);
 
         List<string> options = new List<string>();
 
@@ -26,7 +29,7 @@ public class Settings : MonoBehaviour
             string option = res[i].width + "x" + res[i].height;
             options.Add(option);
 
-            if(res[i].width == Screen.currentResolution.width && res[i].height == Screen.currentResolution.height)
+            if (res[i].width == Screen.currentResolution.width && res[i].height == Screen.currentResolution.height)
             {
                 currentResIndex = i;
             }
@@ -35,7 +38,6 @@ public class Settings : MonoBehaviour
         resDropdown.AddOptions(options);
         resDropdown.value = currentResIndex;
         resDropdown.RefreshShownValue();
-        
     }
 
     public void SetResolution(int resIndex)
@@ -46,10 +48,9 @@ public class Settings : MonoBehaviour
 
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("MixerVolume", Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat("GameVolume", volume);
+        audioMixer.SetFloat("MixerVolume", volume);
     }
-    
+
     public void SetGraphic(int qIndex)
     {
         QualitySettings.SetQualityLevel(qIndex);
@@ -62,7 +63,11 @@ public class Settings : MonoBehaviour
 
     public void SetSensitivity(float sens)
     {
-        mouseSen = sens;
-        PlayerPrefs.SetFloat("sensvalue", sens);
+        camSen = sens;
+    }
+
+    public void SetFOV(float fieldOfView)
+    {
+        fov = fieldOfView;
     }
 }
