@@ -12,14 +12,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(mouseSen == 0)
-        {
-            mouseSen = Settings.camSen;
-        }
-        if(cam.fieldOfView == 0)
-        {
-            cam.fieldOfView = Settings.fov;
-        }
+
         
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -27,7 +20,10 @@ public class CameraMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {        
+        mouseSen = Settings.camSen;
+        cam.fieldOfView = Settings.fov;
+
         // mouse input
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSen;
         float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSen;
