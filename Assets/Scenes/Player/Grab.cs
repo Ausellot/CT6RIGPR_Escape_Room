@@ -29,7 +29,6 @@ public class Grab : MonoBehaviour
         //pick up item
         if (Input.GetMouseButtonDown(1))
         {
-
             if (pickedItem)
             {
                 DropItem(pickedItem);

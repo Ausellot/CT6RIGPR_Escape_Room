@@ -42,9 +42,6 @@ public class CameraMovement : MonoBehaviour
         rotX = Mathf.Clamp(rotX, -90f, 90f);
         transform.localRotation = Quaternion.Euler(rotX, 0f, 0f);
 
-        Debug.Log(mouseSen);
-        Debug.Log(cam.fieldOfView);
-
         // rotate left and right
         player.Rotate(Vector3.up * mouseX);
     }
