@@ -30,8 +30,8 @@ public class RoomVariables : MonoBehaviour
 
         if (RoomsPowered)
         {
-            GameObject.Find("CellingFanRotater").transform.Rotate(new Vector3(0f,0f,Time.deltaTime * 15f));
-            GameObject.Find("CellingFanRotater2").transform.Rotate(new Vector3(0f, 0f, Time.deltaTime * 15f));
+            GameObject.Find("CeilingFanRotator").transform.Rotate(new Vector3(0f,0f,Time.deltaTime * 15f));
+            GameObject.Find("CeilingFanRotator2").transform.Rotate(new Vector3(0f, 0f, Time.deltaTime * 15f));
         }
     }
 }

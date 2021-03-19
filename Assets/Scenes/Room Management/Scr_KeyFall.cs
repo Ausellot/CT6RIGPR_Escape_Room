@@ -17,7 +17,7 @@ public class Scr_KeyFall : MonoBehaviour
     {
       if (KeyToDrop != null) { 
 
-        if (transform.rotation.eulerAngles.y >= 286)
+        if (transform.rotation.eulerAngles.y >= 2)
         {           
             KeyToDrop.GetComponent<BoxCollider>().enabled = true;
             KeyToDrop.GetComponent<Rigidbody>().useGravity = true;

@@ -32,6 +32,7 @@ TagManager:
   - Camera
   - DrawersLock
   - Sink
+  - Flashlight
   layers:
   - Default
   - TransparentFX
