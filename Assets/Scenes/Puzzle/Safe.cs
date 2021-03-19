@@ -93,7 +93,7 @@ public class Safe : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 1.0f))
+            if (Physics.Raycast(ray, out hit, 5.0f))
             {
                 var selction = hit.transform;
 
