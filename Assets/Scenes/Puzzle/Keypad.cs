@@ -9,7 +9,8 @@ public class Keypad : MonoBehaviour
 {
     public GameObject Enable;
     public GameObject Door1;
-  
+
+    public AudioSource Click;
 
     public string CorrectPassword = "123";
     public string input;
@@ -118,5 +119,9 @@ public class Keypad : MonoBehaviour
                 DisplayText.text = input.ToString();
                 break;
         }
+    }
+    public void Playsound()
+    {
+        Click.Play();
     }
 }
