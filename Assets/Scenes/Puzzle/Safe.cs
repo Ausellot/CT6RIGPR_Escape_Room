@@ -8,6 +8,8 @@ public class Safe : MonoBehaviour
     public GameObject Enable;
     public GameObject SafeDoor1;
 
+    public GameObject Enable2;
+
     public AudioSource NormalClick;
     public AudioSource CorrectClick;
 
@@ -62,7 +64,9 @@ public class Safe : MonoBehaviour
                 GameObject.Find("Thief Tools").GetComponent<BoxCollider>().enabled = true;
                 GameObject.Find("Thief Tools").GetComponent<Rigidbody>().useGravity = true;
                 Debug.Log("Safe Opening");
-                
+
+                Enable2.SetActive(false);
+
                 input1 = Number1.ToString();
                 input2 = Number2.ToString();
                 input3 = Number3.ToString();
