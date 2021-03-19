@@ -14,7 +14,6 @@ public class Barrel : MonoBehaviour
     void Start()
     {
         itemsObj = new List<GameObject>();
-        
     }
 
     void Update()

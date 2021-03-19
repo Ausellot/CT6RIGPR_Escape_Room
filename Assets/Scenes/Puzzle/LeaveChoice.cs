@@ -7,6 +7,12 @@ public class LeaveChoice : MonoBehaviour
 {
     public GameObject LeaveChoiceInstructions;
 
+    void Start()
+    {
+        Barrel.destroyEnding = false;
+        CameraShot.cameraEnding = false;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "LeaveChoice")
