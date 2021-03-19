@@ -14,12 +14,14 @@ public class Barrel : MonoBehaviour
     void Start()
     {
         itemsObj = new List<GameObject>();
+        
     }
 
     void Update()
     {
         if (itemsObj.Count >= maxItems)
         {
+            itemsObj = new List<GameObject>();
             destroyEnding = true;
         }
     }

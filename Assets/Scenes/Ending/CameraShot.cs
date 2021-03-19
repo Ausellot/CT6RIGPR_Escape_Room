@@ -50,6 +50,7 @@ public class CameraShot : MonoBehaviour
 
         if (itemsObj.Count >= maxItems)
         {
+            itemsObj = new List<GameObject>();
             cameraEnding = true;
         }
     }
