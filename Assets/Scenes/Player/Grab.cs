@@ -27,7 +27,7 @@ public class Grab : MonoBehaviour
         if (Input.GetKey(KeyCode.E)) { transform.Rotate(-Vector3.right * rotSpeed * Time.deltaTime); }
 
         //pick up item
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
 
             if (pickedItem)
