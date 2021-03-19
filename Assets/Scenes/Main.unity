@@ -15677,7 +15677,7 @@ GameObject:
   - component: {fileID: 1330119456}
   - component: {fileID: 1330119463}
   m_Layer: 0
-  m_Name: Fuse
+  m_Name: Fuse2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41876,7 +41876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockType: 1
-  Key: {fileID: 1330119455}
+  Key: {fileID: 3576351737915400423}
 --- !u!1 &3576351738661956209
 GameObject:
   m_ObjectHideFlags: 0
@@ -43559,8 +43559,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &3576351739516367913
-BoxCollider:
+--- !u!64 &3576351739516367913
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -43569,9 +43569,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.034714434, y: 0.013445025, z: 0.020029336}
-  m_Center: {x: -0.01569292, y: 0.0067225117, z: -0.00029857038}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5299334708804420200, guid: 1140a00f4a062854593d2390abf5cd84, type: 3}
 --- !u!1 &3576351739518790243
 GameObject:
   m_ObjectHideFlags: 0
