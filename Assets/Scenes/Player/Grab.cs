@@ -77,7 +77,7 @@ public class Grab : MonoBehaviour
         //allows an object to always start forward, regardless of previous rotations
         if(pickedItem.tag == "Flashlight")
         {
-            transform.localRotation = Quaternion.Euler(180, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
