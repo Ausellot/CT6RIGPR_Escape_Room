@@ -15,6 +15,7 @@ public class CameraMovement : MonoBehaviour
         Pause.gameIsPaused = false;
         mouseSen = Settings.camSen;
         cam.fieldOfView = Settings.fov;
+        Time.timeScale = 1f;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
