@@ -9,6 +9,7 @@ public class Barrel : MonoBehaviour
     public int maxItems;
     public GameObject otherObj;
     public string otherScr;
+    public static bool destroyEnding = false;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class Barrel : MonoBehaviour
     {
         if (itemsObj.Count >= maxItems)
         {
-            SceneManager.LoadScene("DestroyFinalChoice");
+            destroyEnding = true;
         }
     }
 

@@ -17,6 +17,7 @@ public class CameraShot : MonoBehaviour
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
     public bool tookPhoto;
+    public static bool cameraEnding = false;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class CameraShot : MonoBehaviour
 
         if (itemsObj.Count >= maxItems)
         {
-            SceneManager.LoadScene("EvidenceFinalChoice");
+            cameraEnding = true;
         }
     }
 
