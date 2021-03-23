@@ -21,11 +21,13 @@ public class PickableItem : MonoBehaviour
     {
         float CollisionForce = collision.relativeVelocity.magnitude;
         Debug.Log("Collision at " + CollisionForce + ", from: " + transform.gameObject.name);
+        
         if (collision.relativeVelocity.magnitude > 0.1)
         {
             //GetComponent<AudioSource>().volume = CollisionForce / 8;
             //GetComponent<AudioSource>().
            GetComponent<AudioSource>().Play();
+            
         }
     }
 }

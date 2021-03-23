@@ -108,23 +108,44 @@ public class Grab : MonoBehaviour
 
     bool CanSeeHeldItem()
     {
-        var ray = cam.ViewportPointToRay(Vector3.one * 0.5f);
+        var ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.35f, 0f));
+        
+        //ray.direction = Vector3.Scale(ray.direction, new Vector3(1f, 2.5f, 1f));
+        //Debug.DrawRay(ray.origin, ray.direction);
+        //Debug.Break();
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 1.25f))
         {
             //returns if it hit something
-            Debug.Log(hit.collider.gameObject.name);
+            
             if (hit.collider.gameObject.name == transform.GetChild(0).gameObject.name)
             {
-                return true;
+                Collider[] hitColliders = Physics.OverlapSphere(transform.GetChild(0).gameObject.transform.position,0.2f);
+                int i = 0;
+
+                while (i < hitColliders.Length)
+                {
+                    
+                    
+                    if (hitColliders[i].name == "Player" || hitColliders[i].name == transform.GetChild(0).gameObject.name)
+                    {
+
+                    } else
+                    {
+                        Debug.Log(hitColliders[i].name);
+                        return false;
+                    }
+                    i++;
+                }
+                    return true;
             }
 
         }
         else
         {
             //it must have not hit anything
-            return true;
+            //return true;
         }
 
 
