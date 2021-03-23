@@ -19,10 +19,10 @@ public class scr_KeyItem : MonoBehaviour
 
         while (i < hitColliders.Length && transform.parent.name == "Grab")
         {
-            Debug.Log(hitColliders[i].name + " at the " + i.ToString() + "th place. User at " + gameObject.transform.position.ToString() + " Distance = " + (Vector3.Distance(gameObject.transform.position, hitColliders[i].gameObject.transform.position).ToString()));
+            //Debug.Log(hitColliders[i].name + " at the " + i.ToString() + "th place. User at " + gameObject.transform.position.ToString() + " Distance = " + (Vector3.Distance(gameObject.transform.position, hitColliders[i].gameObject.transform.position).ToString()));
             if (hitColliders[i].GetComponent<scr_LockedLocation>() != null)
             {
-                Debug.Log("KeyContact with " + hitColliders[i].name + " at the " + i.ToString() + "th place");
+                //Debug.Log("KeyContact with " + hitColliders[i].name + " at the " + i.ToString() + "th place");
                 if (hitColliders[i].GetComponent<scr_LockedLocation>().lockType == keyType && Vector3.Distance(gameObject.transform.position, hitColliders[i].transform.position) < 0.5f)
                 {
                     if (Door1 != null)
