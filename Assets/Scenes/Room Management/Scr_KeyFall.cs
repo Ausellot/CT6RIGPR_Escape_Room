@@ -15,9 +15,9 @@ public class Scr_KeyFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (KeyToDrop != null) { 
-
-        if (transform.rotation.eulerAngles.y >= 2)
+      if (KeyToDrop != null) {
+            //Debug.Log(transform.rotation.eulerAngles.y);
+        if (transform.rotation.eulerAngles.y >= 110)
         {           
             KeyToDrop.GetComponent<BoxCollider>().enabled = true;
             KeyToDrop.GetComponent<Rigidbody>().useGravity = true;
