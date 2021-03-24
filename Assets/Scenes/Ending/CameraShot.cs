@@ -74,17 +74,37 @@ public class CameraShot : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision col)
+    //void OnTriggerEnter(Collision col)
+    //{
+    //    GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
+    //    GameObject obj = col.collider.gameObject;
+
+    //    while (col.collider == true)
+    //    {
+    //        Physics.IgnoreLayerCollision(0, 11, true);
+    //        if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged"))
+    //        {
+    //            itemsObj.Add(col.gameObject);
+    //            //list.transform.gameObject.tag = "Untagged";
+    //            obj.gameObject.tag = "Untagged";
+    //            shotCollider.enabled = false;
+    //            tookPhoto = false;
+    //        }
+    //        break;
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
         GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
-        GameObject obj = col.collider.gameObject;
+        GameObject obj = other.gameObject;
 
-        while (col.collider == true)
+        while (other == true)
         {
             Physics.IgnoreLayerCollision(0, 11, true);
             if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged"))
             {
-                itemsObj.Add(col.gameObject);
+                itemsObj.Add(other.gameObject);
                 //list.transform.gameObject.tag = "Untagged";
                 obj.gameObject.tag = "Untagged";
                 shotCollider.enabled = false;
@@ -96,10 +116,12 @@ public class CameraShot : MonoBehaviour
 
     //void OnTriggerEnter(Collider col)
     //{
+    //    //Debug.Log(col.name);
+
     //    GameObject list = GameObject.FindGameObjectWithTag("EvidenceItems");
     //    GameObject obj = col.GetComponent<Collider>().gameObject;
 
-    //    while(col == true)
+    //    while (col == true)
     //    {
     //        if ((obj.tag == list.tag) && tookPhoto == true)
     //        {
