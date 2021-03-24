@@ -66,15 +66,15 @@ public class LightController : MonoBehaviour
                     flashlight.color = Color.red;
                     reveal = red;
                 }
-                else if (Input.GetKeyDown("0"))
-                {
-                    if (reveal != null)
-                    {
-                        reveal.SetFloat("_LightAngle", 0f);
-                    }
-                    flashlight.color = Color.white;
-                    reveal = null;
-                }
+                //else if (Input.GetKeyDown("0"))
+                //{
+                //    if (reveal != null)
+                //    {
+                //        reveal.SetFloat("_LightAngle", 0f);
+                //    }
+                //    flashlight.color = Color.white;
+                //    reveal = null;
+                //}
 
                 reveal.SetVector("_LightPosition", flashlight.transform.position);
                 reveal.SetVector("_LightDirection", -flashlight.transform.forward);
