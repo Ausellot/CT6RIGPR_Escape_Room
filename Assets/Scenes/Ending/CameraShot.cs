@@ -59,7 +59,6 @@ public class CameraShot : MonoBehaviour
     {
         if (takePhoto)
         {
-            
             Texture2D text = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
             text.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, false);
             text.Apply();

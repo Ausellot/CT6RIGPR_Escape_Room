@@ -7,6 +7,7 @@ public class PhotoAlbum : MonoBehaviour
     // Start is called before the first frame update
     public GameObject album;
     private bool isShown;
+    public static bool isActive;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class PhotoAlbum : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            isActive = false;
             isShown = !isShown;
             album.SetActive(isShown);
         }
