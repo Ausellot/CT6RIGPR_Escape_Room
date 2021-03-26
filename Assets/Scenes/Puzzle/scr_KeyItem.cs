@@ -9,8 +9,6 @@ public class scr_KeyItem : MonoBehaviour
     public GameObject Door1;
     public GameObject RoomManager;
 
-   
-
     // Update is called once per frame
     void Update()
     {
@@ -27,9 +25,15 @@ public class scr_KeyItem : MonoBehaviour
                 {
                     if (Door1 != null)
                     {
-                        Door1.GetComponent<scr_DoorManager>().KeyInput = true;
-                        Destroy(gameObject);
-                    }                    
+                        if(keyType == 2)
+                        {
+                            Door1.GetComponent<scr_DoorManager>().KeyInput = true;
+                        } else
+                        {
+                            Door1.GetComponent<scr_DoorManager>().KeyInput = true;
+                            Destroy(gameObject);
+                        }
+                    }    
                     if (RoomManager != null)
                     {
                         RoomManager.GetComponent<RoomVariables>().RoomsPowered = true;

@@ -13,6 +13,7 @@ public class CameraShot : MonoBehaviour
     private Camera cam;
 
     public GameObject camDevice;
+    public GameObject evidenceNote1;
     public Image m_display;
     public static List<GameObject> itemsObj = new List<GameObject>();
     public int maxItems;
@@ -101,7 +102,7 @@ public class CameraShot : MonoBehaviour
         while (other == true)
         {
             Physics.IgnoreLayerCollision(0, 11, true);
-            if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged"))
+            if ((obj.tag == list.tag) && tookPhoto == true && shotCollider.enabled == true && (list.transform.gameObject.tag != "Untagged") || evidenceNote1)
             {
                 itemsObj.Add(other.gameObject);
                 //list.transform.gameObject.tag = "Untagged";

@@ -10,6 +10,7 @@ public class Barrel : MonoBehaviour
     public GameObject otherObj;
     public string otherScr;
     public static bool destroyEnding = false;
+    public GameObject evidenceNote1;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class Barrel : MonoBehaviour
 
         while ((collision.collider == true) && gameObject.GetComponent<Barrel>().enabled == true)
         {
-            if (obj.tag == list.tag)
+            if (obj.tag == list.tag || evidenceNote1)
             {
                 itemsObj.Add(collision.collider.gameObject);
                 (otherObj.GetComponent(otherScr) as MonoBehaviour).enabled = false;

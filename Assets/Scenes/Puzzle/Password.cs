@@ -22,7 +22,7 @@ public class Password : MonoBehaviour
     public GameObject Enable14;
     public GameObject Enable15;
     public GameObject Enable16;
-
+    public GameObject Enable17;
 
     private bool PasswordScreen;
     private bool Note1Screen;
@@ -41,15 +41,11 @@ public class Password : MonoBehaviour
     private bool Note14Screen;
     private bool Note15Screen; 
     private bool Note16Screen;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private bool Note17Screen;
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (Input.GetKeyDown(KeyCode.P))
         {
             Enable.SetActive(false);
@@ -116,6 +112,10 @@ public class Password : MonoBehaviour
             Enable16.SetActive(false);
             Note15Screen = false;
             Note16Screen = false;
+            Time.timeScale = 1.0f;
+
+            Enable17.SetActive(false);
+            Note17Screen = false;
             Time.timeScale = 1.0f;
         }
     }
@@ -305,6 +305,16 @@ public class Password : MonoBehaviour
                             Note16Screen = true;
                         }
                     }
+                    if (selction.CompareTag("Note17"))
+                    {
+                        Note17Screen = true;
+
+                        var selectionRender = selction.GetComponent<Renderer>();
+                        if (selectionRender != null)
+                        {
+                            Note17Screen = true;
+                        }
+                    }
                 }
             }
         }
@@ -391,6 +401,11 @@ public class Password : MonoBehaviour
         if (Note16Screen)
         {
             Enable16.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+        if (Note17Screen)
+        {
+            Enable17.SetActive(true);
             Time.timeScale = 0.0f;
         }
     }

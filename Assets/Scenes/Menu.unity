@@ -324,24 +324,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Double press K - Take Photo
+  m_text: 'K - Take Photo
 
-    Spacebar - Shows last Photo
+    Spacebar - Show Photo
 
-    Q &
-    E - Rotate Object
+    Q & E - Rotate Object
 
-    F - Flashlight On/Off
+    F
+    - Flashlight On/Off
 
     P - Exit off Notes
 
 
-    1
-    - Green
+    1 - Green
 
     2 - Blue
 
-    3 - Red'
+    3
+    - Red'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
